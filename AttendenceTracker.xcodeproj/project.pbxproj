@@ -58,6 +58,14 @@
 		DE4506602E3A28840085626C /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45045C2E3A28840085626C /* PaddingLabel.swift */; };
 		DE4506612E3A28840085626C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4505412E3A28840085626C /* SplashViewController.swift */; };
 		DE4506662E3A28840085626C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45045A2E3A28840085626C /* GradientView.swift */; };
+		DE45066F2E3A2CF80085626C /* AttendanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45066E2E3A2CF80085626C /* AttendanceManager.swift */; };
+		DE4506712E3A2D2D0085626C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4506702E3A2D2D0085626C /* Course.swift */; };
+		DE4506732E3A315E0085626C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4506722E3A315E0085626C /* Status.swift */; };
+		DE4506752E3A32B90085626C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4506742E3A32B90085626C /* Color.swift */; };
+		DE4506772E3A33040085626C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4506762E3A33040085626C /* Student.swift */; };
+		DECC9E632E3E101C0039B5A1 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E622E3E101C0039B5A1 /* Attendance.swift */; };
+		DECC9E672E3E1B810039B5A1 /* AttendanceNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E662E3E1B810039B5A1 /* AttendanceNote.swift */; };
+		DECC9E692E3E211A0039B5A1 /* StudentNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E682E3E211A0039B5A1 /* StudentNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +124,14 @@
 		DE4505402E3A28840085626C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		DE4505412E3A28840085626C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		DE4505872E3A28840085626C /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		DE45066E2E3A2CF80085626C /* AttendanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceManager.swift; sourceTree = "<group>"; };
+		DE4506702E3A2D2D0085626C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		DE4506722E3A315E0085626C /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		DE4506742E3A32B90085626C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		DE4506762E3A33040085626C /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		DECC9E622E3E101C0039B5A1 /* Attendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
+		DECC9E662E3E1B810039B5A1 /* AttendanceNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceNote.swift; sourceTree = "<group>"; };
+		DECC9E682E3E211A0039B5A1 /* StudentNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +376,7 @@
 		DE4505892E3A28840085626C /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE45066C2E3A2CE40085626C /* Attendance */,
 				DE4505882E3A28840085626C /* Session */,
 			);
 			path = Service;
@@ -373,6 +390,29 @@
 				DE4505892E3A28840085626C /* Service */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		DE45066C2E3A2CE40085626C /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				DE45066D2E3A2CEE0085626C /* Model */,
+				DE45066E2E3A2CF80085626C /* AttendanceManager.swift */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		DE45066D2E3A2CEE0085626C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE4506702E3A2D2D0085626C /* Course.swift */,
+				DE4506722E3A315E0085626C /* Status.swift */,
+				DE4506742E3A32B90085626C /* Color.swift */,
+				DE4506762E3A33040085626C /* Student.swift */,
+				DECC9E622E3E101C0039B5A1 /* Attendance.swift */,
+				DECC9E662E3E1B810039B5A1 /* AttendanceNote.swift */,
+				DECC9E682E3E211A0039B5A1 /* StudentNote.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,6 +543,7 @@
 				DE45059E2E3A28840085626C /* RequestReview.swift in Sources */,
 				DE4505A12E3A28840085626C /* NumberLaunches.swift in Sources */,
 				DE4505A42E3A28840085626C /* ScreenSize.swift in Sources */,
+				DE45066F2E3A2CF80085626C /* AttendanceManager.swift in Sources */,
 				DE4505B02E3A28840085626C /* Appearance.swift in Sources */,
 				DE4505B22E3A28840085626C /* SplashReceiptValidationObserver.swift in Sources */,
 				DE4505CF2E3A28840085626C /* UIDevice+Extension.swift in Sources */,
@@ -515,6 +556,8 @@
 				DE4505E32E3A28840085626C /* NavigationController.swift in Sources */,
 				DE4505E42E3A28840085626C /* Fonts.swift in Sources */,
 				DE4505E62E3A28840085626C /* UIApplication+Extension.swift in Sources */,
+				DE4506752E3A32B90085626C /* Color.swift in Sources */,
+				DE4506732E3A315E0085626C /* Status.swift in Sources */,
 				DE4505E72E3A28840085626C /* String+Extension.swift in Sources */,
 				DE4505EC2E3A28840085626C /* TextAttributes.swift in Sources */,
 				DE4505EE2E3A28840085626C /* NetworkError.swift in Sources */,
@@ -524,13 +567,18 @@
 				DE4506012E3A28840085626C /* SceneDelegate.swift in Sources */,
 				DE4506032E3A28840085626C /* PaddingTextField.swift in Sources */,
 				DE4506062E3A28840085626C /* APIFormDataRequestBody.swift in Sources */,
+				DECC9E692E3E211A0039B5A1 /* StudentNote.swift in Sources */,
 				DE4506102E3A28840085626C /* UITapGestureRecognizer+Extension.swift in Sources */,
+				DE4506712E3A2D2D0085626C /* Course.swift in Sources */,
 				DE4506152E3A28840085626C /* APIRequestBody.swift in Sources */,
+				DE4506772E3A33040085626C /* Student.swift in Sources */,
+				DECC9E672E3E1B810039B5A1 /* AttendanceNote.swift in Sources */,
 				DE4506192E3A28840085626C /* NavigationControllerSettings.swift in Sources */,
 				DE45061D2E3A28840085626C /* TapAreaButton.swift in Sources */,
 				DE45061E2E3A28840085626C /* SplashView.swift in Sources */,
 				DE45062C2E3A28840085626C /* GlobalDefinitions.swift in Sources */,
 				DE45062F2E3A28840085626C /* SignError.swift in Sources */,
+				DECC9E632E3E101C0039B5A1 /* Attendance.swift in Sources */,
 				DE4506332E3A28840085626C /* ObservableAndSingle+Extension.swift in Sources */,
 				DE4506452E3A28840085626C /* UIColor+Extension.swift in Sources */,
 				DE45064C2E3A28840085626C /* AppDelegate.swift in Sources */,
