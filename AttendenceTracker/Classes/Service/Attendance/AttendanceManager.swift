@@ -69,6 +69,7 @@ final class AttendanceManager {
     }
 }
 
+// MARK: AttendanceManagerProtocol
 extension AttendanceManager: AttendanceManagerProtocol {
     func fetchAllStatuses() -> Single<[Status]> {
         Single.create { single in
@@ -76,9 +77,7 @@ extension AttendanceManager: AttendanceManagerProtocol {
                 let statuses = try self.dbQueue.read { db in
                     try Status.fetchAll(db)
                 }
-                
-                let all = Status.systems() + statuses
-                single(.success(all))
+                single(.success(statuses))
             } catch {
                 single(.failure(error))
             }
@@ -614,6 +613,10 @@ private extension AttendanceManager {
                 t.column("isSystem", .boolean).notNull()
                 t.column("createdAt", .double).notNull()
             }
+            for system in Status.systems() {
+                try system.insert(db)
+            }
+            
             try db.create(table: "default_status") { t in
                 t.column("statusId", .text).primaryKey().notNull()
             }

@@ -25,13 +25,13 @@
 "Main.Settings" = "Settings";
 
 // MARK: Settings
-"Settings.Statuses" = "Statuses";
+"Settings.Statuses" = "Status";
 "Settings.TermsOfUse" = "Terms Of Use";
 "Settings.PrivacyPolicy" = "Privacy Policy";
 "Settings.ContactUs" = "Contact Us";
 
 // MARK: Statuses
-"Statuses.Title" = "Statuses";
+"Statuses.Title" = "Status";
 "Statuses.DefaultInfo" = "Long press on a status to make it default";
 "Statuses.CreateStatus" = "Add";
 "Statuses.System.Present" = "Present";
