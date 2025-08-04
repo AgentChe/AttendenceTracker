@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Color {
+struct Color: Codable {
     let r: CGFloat
     let g: CGFloat
     let b: CGFloat

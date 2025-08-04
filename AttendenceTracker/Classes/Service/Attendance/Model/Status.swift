@@ -5,11 +5,11 @@
 //  Created by Андрей Чернышев on 30.07.2025.
 //
 
-import UIKit
+import GRDB
 
-struct Status {
-    let id: String
-    let name: String
-    let color: Color
-    let isSystem: Bool
-}
+struct Status: Codable, Identifiable, FetchableRecord, PersistableRecord {
+     let id: String
+     let title: String
+     let color: Color
+     let createdAt: TimeInterval
+ }

@@ -5,17 +5,11 @@
 //  Created by Андрей Чернышев on 02.08.2025.
 //
 
-import Foundation
+import GRDB
 
-struct Attendance {
-    struct Record {
-        let id: String
-        let studentId: String
-        let statusId: String
-    }
-
+struct Attendance: Codable, Identifiable, FetchableRecord, PersistableRecord {
     let id: String
     let courseId: String
     let date: TimeInterval
-    let records: [Record]
+    let createdAt: TimeInterval
 }

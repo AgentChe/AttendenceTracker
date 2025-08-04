@@ -66,6 +66,10 @@
 		DECC9E632E3E101C0039B5A1 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E622E3E101C0039B5A1 /* Attendance.swift */; };
 		DECC9E672E3E1B810039B5A1 /* AttendanceNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E662E3E1B810039B5A1 /* AttendanceNote.swift */; };
 		DECC9E692E3E211A0039B5A1 /* StudentNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E682E3E211A0039B5A1 /* StudentNote.swift */; };
+		DECC9E6B2E3E2B8A0039B5A1 /* Enrollment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E6A2E3E2B8A0039B5A1 /* Enrollment.swift */; };
+		DECC9E6D2E3E2BAB0039B5A1 /* CourseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E6C2E3E2BAB0039B5A1 /* CourseStatus.swift */; };
+		DECC9E6F2E3E2DE10039B5A1 /* AttendanceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E6E2E3E2DE10039B5A1 /* AttendanceRecord.swift */; };
+		DECC9E712E3FC0C90039B5A1 /* AttendanceMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E702E3FC0C90039B5A1 /* AttendanceMediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +136,10 @@
 		DECC9E622E3E101C0039B5A1 /* Attendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
 		DECC9E662E3E1B810039B5A1 /* AttendanceNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceNote.swift; sourceTree = "<group>"; };
 		DECC9E682E3E211A0039B5A1 /* StudentNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNote.swift; sourceTree = "<group>"; };
+		DECC9E6A2E3E2B8A0039B5A1 /* Enrollment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enrollment.swift; sourceTree = "<group>"; };
+		DECC9E6C2E3E2BAB0039B5A1 /* CourseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStatus.swift; sourceTree = "<group>"; };
+		DECC9E6E2E3E2DE10039B5A1 /* AttendanceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRecord.swift; sourceTree = "<group>"; };
+		DECC9E702E3FC0C90039B5A1 /* AttendanceMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceMediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +405,7 @@
 			children = (
 				DE45066D2E3A2CEE0085626C /* Model */,
 				DE45066E2E3A2CF80085626C /* AttendanceManager.swift */,
+				DECC9E702E3FC0C90039B5A1 /* AttendanceMediator.swift */,
 			);
 			path = Attendance;
 			sourceTree = "<group>";
@@ -410,7 +419,10 @@
 				DE4506762E3A33040085626C /* Student.swift */,
 				DECC9E622E3E101C0039B5A1 /* Attendance.swift */,
 				DECC9E662E3E1B810039B5A1 /* AttendanceNote.swift */,
+				DECC9E6E2E3E2DE10039B5A1 /* AttendanceRecord.swift */,
 				DECC9E682E3E211A0039B5A1 /* StudentNote.swift */,
+				DECC9E6A2E3E2B8A0039B5A1 /* Enrollment.swift */,
+				DECC9E6C2E3E2BAB0039B5A1 /* CourseStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -553,6 +565,8 @@
 				DE4505DE2E3A28840085626C /* Weak.swift in Sources */,
 				DE4505E12E3A28840085626C /* Collection+Extension.swift in Sources */,
 				DE4505E22E3A28840085626C /* RestAPITransport.swift in Sources */,
+				DECC9E6D2E3E2BAB0039B5A1 /* CourseStatus.swift in Sources */,
+				DECC9E6F2E3E2DE10039B5A1 /* AttendanceRecord.swift in Sources */,
 				DE4505E32E3A28840085626C /* NavigationController.swift in Sources */,
 				DE4505E42E3A28840085626C /* Fonts.swift in Sources */,
 				DE4505E62E3A28840085626C /* UIApplication+Extension.swift in Sources */,
@@ -569,6 +583,7 @@
 				DE4506062E3A28840085626C /* APIFormDataRequestBody.swift in Sources */,
 				DECC9E692E3E211A0039B5A1 /* StudentNote.swift in Sources */,
 				DE4506102E3A28840085626C /* UITapGestureRecognizer+Extension.swift in Sources */,
+				DECC9E712E3FC0C90039B5A1 /* AttendanceMediator.swift in Sources */,
 				DE4506712E3A2D2D0085626C /* Course.swift in Sources */,
 				DE4506152E3A28840085626C /* APIRequestBody.swift in Sources */,
 				DE4506772E3A33040085626C /* Student.swift in Sources */,
@@ -582,6 +597,7 @@
 				DE4506332E3A28840085626C /* ObservableAndSingle+Extension.swift in Sources */,
 				DE4506452E3A28840085626C /* UIColor+Extension.swift in Sources */,
 				DE45064C2E3A28840085626C /* AppDelegate.swift in Sources */,
+				DECC9E6B2E3E2B8A0039B5A1 /* Enrollment.swift in Sources */,
 				DE45064D2E3A28840085626C /* ChoosePhotoFromGallery.swift in Sources */,
 				DE4506522E3A28840085626C /* SessionManager.swift in Sources */,
 				DE4506552E3A28840085626C /* ContentError.swift in Sources */,

@@ -5,11 +5,10 @@
 //  Created by Андрей Чернышев on 30.07.2025.
 //
 
-import Foundation
+import GRDB
 
-struct Course {
+struct Course: Codable, Identifiable, FetchableRecord, PersistableRecord {
     let id: String
     let name: String
-    let createdAt: Date
-    let students: [String]
+    let createdAt: TimeInterval
 }

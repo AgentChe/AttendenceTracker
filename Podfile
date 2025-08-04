@@ -12,6 +12,7 @@ target 'AttendenceTracker' do
   pod 'RxCocoa'
   
   pod 'Alamofire'
+  pod 'GRDB.swift'
   
   pod 'SwiftyStoreKit'
 
