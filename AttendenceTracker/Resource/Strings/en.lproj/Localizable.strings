@@ -15,3 +15,11 @@
 "OK" = "OK";
 "Save" = "Save";
 "Delete" = "Delete";
+
+// MARK: Splash
+"Splash.Preparing" = "Preparing...";
+
+// MARK: Main
+"Main.Courses" = "Courses";
+"Main.Students" = "Students";
+"Main.Settings" = "Settings";

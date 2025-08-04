@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 final class SplashViewController: UIViewController {
     private lazy var mainView = SplashView()
@@ -48,7 +46,7 @@ private extension SplashViewController {
             
             return
         }
-        // TODO
-//        window.rootViewController = MainViewController.make(requestReview: false)
+        
+        window.rootViewController = MainViewController.make(requestReview: false)
     }
 }
