@@ -47,7 +47,7 @@ private extension MainTabItemButton {
     }
     
     func update() {
-        label.alpha = mode == .selected ? 1 : 0.6
+        label.alpha = mode == .selected ? 1 : 0.4
     }
 }
 

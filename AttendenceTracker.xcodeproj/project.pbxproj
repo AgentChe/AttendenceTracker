@@ -61,7 +61,6 @@
 		DE45066F2E3A2CF80085626C /* AttendanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45066E2E3A2CF80085626C /* AttendanceManager.swift */; };
 		DE4506712E3A2D2D0085626C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4506702E3A2D2D0085626C /* Course.swift */; };
 		DE4506732E3A315E0085626C /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4506722E3A315E0085626C /* Status.swift */; };
-		DE4506752E3A32B90085626C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4506742E3A32B90085626C /* Color.swift */; };
 		DE4506772E3A33040085626C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4506762E3A33040085626C /* Student.swift */; };
 		DECC9E632E3E101C0039B5A1 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E622E3E101C0039B5A1 /* Attendance.swift */; };
 		DECC9E672E3E1B810039B5A1 /* AttendanceNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E662E3E1B810039B5A1 /* AttendanceNote.swift */; };
@@ -75,6 +74,21 @@
 		DECC9E7B2E40C7AB0039B5A1 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E7A2E40C7AB0039B5A1 /* MainCoordinator.swift */; };
 		DECC9E7F2E40C7C00039B5A1 /* MainTabItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E7E2E40C7C00039B5A1 /* MainTabItemButton.swift */; };
 		DECC9E812E40C7CE0039B5A1 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E802E40C7CE0039B5A1 /* MainTabView.swift */; };
+		DECC9E842E40D1050039B5A1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E832E40D1050039B5A1 /* SettingsView.swift */; };
+		DECC9E862E40D10C0039B5A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E852E40D10C0039B5A1 /* SettingsViewController.swift */; };
+		DECC9E882E40D1110039B5A1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E872E40D1110039B5A1 /* SettingsViewModel.swift */; };
+		DECC9E8C2E40D28E0039B5A1 /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E8B2E40D28E0039B5A1 /* SettingsTableView.swift */; };
+		DECC9E8E2E40D2A10039B5A1 /* SettingsTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E8D2E40D2A10039B5A1 /* SettingsTableElement.swift */; };
+		DECC9E902E40D2A60039B5A1 /* SettingsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E8F2E40D2A60039B5A1 /* SettingsTableCell.swift */; };
+		DECC9E942E40DD830039B5A1 /* StatusesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E932E40DD830039B5A1 /* StatusesViewController.swift */; };
+		DECC9E962E40DD880039B5A1 /* StatusesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E952E40DD880039B5A1 /* StatusesViewModel.swift */; };
+		DECC9E982E40DD8C0039B5A1 /* StatusesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E972E40DD8C0039B5A1 /* StatusesView.swift */; };
+		DECC9E9C2E40DF4E0039B5A1 /* StatusesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E9B2E40DF4E0039B5A1 /* StatusesTableView.swift */; };
+		DECC9EA02E40DF650039B5A1 /* StatusesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9E9F2E40DF650039B5A1 /* StatusesTableCell.swift */; };
+		DECC9EA32E40E6FB0039B5A1 /* CreateStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EA22E40E6FB0039B5A1 /* CreateStatusViewController.swift */; };
+		DECC9EA52E40E7040039B5A1 /* CreateStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EA42E40E7040039B5A1 /* CreateStatusViewModel.swift */; };
+		DECC9EA72E40E7080039B5A1 /* CreateStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EA62E40E7080039B5A1 /* CreateStatusView.swift */; };
+		DECC9EA92E4112470039B5A1 /* StatusesTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EA82E4112470039B5A1 /* StatusesTableElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,7 +150,6 @@
 		DE45066E2E3A2CF80085626C /* AttendanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceManager.swift; sourceTree = "<group>"; };
 		DE4506702E3A2D2D0085626C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		DE4506722E3A315E0085626C /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		DE4506742E3A32B90085626C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DE4506762E3A33040085626C /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		DECC9E622E3E101C0039B5A1 /* Attendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
 		DECC9E662E3E1B810039B5A1 /* AttendanceNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceNote.swift; sourceTree = "<group>"; };
@@ -150,6 +163,21 @@
 		DECC9E7A2E40C7AB0039B5A1 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		DECC9E7E2E40C7C00039B5A1 /* MainTabItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabItemButton.swift; sourceTree = "<group>"; };
 		DECC9E802E40C7CE0039B5A1 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		DECC9E832E40D1050039B5A1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DECC9E852E40D10C0039B5A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DECC9E872E40D1110039B5A1 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		DECC9E8B2E40D28E0039B5A1 /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
+		DECC9E8D2E40D2A10039B5A1 /* SettingsTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableElement.swift; sourceTree = "<group>"; };
+		DECC9E8F2E40D2A60039B5A1 /* SettingsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableCell.swift; sourceTree = "<group>"; };
+		DECC9E932E40DD830039B5A1 /* StatusesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesViewController.swift; sourceTree = "<group>"; };
+		DECC9E952E40DD880039B5A1 /* StatusesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesViewModel.swift; sourceTree = "<group>"; };
+		DECC9E972E40DD8C0039B5A1 /* StatusesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesView.swift; sourceTree = "<group>"; };
+		DECC9E9B2E40DF4E0039B5A1 /* StatusesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesTableView.swift; sourceTree = "<group>"; };
+		DECC9E9F2E40DF650039B5A1 /* StatusesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesTableCell.swift; sourceTree = "<group>"; };
+		DECC9EA22E40E6FB0039B5A1 /* CreateStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStatusViewController.swift; sourceTree = "<group>"; };
+		DECC9EA42E40E7040039B5A1 /* CreateStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStatusViewModel.swift; sourceTree = "<group>"; };
+		DECC9EA62E40E7080039B5A1 /* CreateStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStatusView.swift; sourceTree = "<group>"; };
+		DECC9EA82E4112470039B5A1 /* StatusesTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesTableElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +406,7 @@
 		DE4505482E3A28840085626C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DECC9E912E40DD6F0039B5A1 /* Status */,
 				DECC9E722E40C76F0039B5A1 /* Splash */,
 			);
 			path = Presentation;
@@ -425,7 +454,6 @@
 			children = (
 				DE4506702E3A2D2D0085626C /* Course.swift */,
 				DE4506722E3A315E0085626C /* Status.swift */,
-				DE4506742E3A32B90085626C /* Color.swift */,
 				DE4506762E3A33040085626C /* Student.swift */,
 				DECC9E622E3E101C0039B5A1 /* Attendance.swift */,
 				DECC9E662E3E1B810039B5A1 /* AttendanceNote.swift */,
@@ -440,6 +468,7 @@
 		DECC9E722E40C76F0039B5A1 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				DECC9E822E40D0000039B5A1 /* Settings */,
 				DECC9E732E40C7770039B5A1 /* Main */,
 				DE4505432E3A28840085626C /* Splash */,
 			);
@@ -472,6 +501,83 @@
 				DECC9E802E40C7CE0039B5A1 /* MainTabView.swift */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		DECC9E822E40D0000039B5A1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9E892E40D2800039B5A1 /* Views */,
+				DECC9E852E40D10C0039B5A1 /* SettingsViewController.swift */,
+				DECC9E872E40D1110039B5A1 /* SettingsViewModel.swift */,
+				DECC9E832E40D1050039B5A1 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DECC9E892E40D2800039B5A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9E8A2E40D2840039B5A1 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DECC9E8A2E40D2840039B5A1 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9E8B2E40D28E0039B5A1 /* SettingsTableView.swift */,
+				DECC9E8D2E40D2A10039B5A1 /* SettingsTableElement.swift */,
+				DECC9E8F2E40D2A60039B5A1 /* SettingsTableCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DECC9E912E40DD6F0039B5A1 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EA12E40E6E60039B5A1 /* CreateStatus */,
+				DECC9E922E40DD780039B5A1 /* Statuses */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		DECC9E922E40DD780039B5A1 /* Statuses */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9E992E40DF430039B5A1 /* Views */,
+				DECC9E932E40DD830039B5A1 /* StatusesViewController.swift */,
+				DECC9E952E40DD880039B5A1 /* StatusesViewModel.swift */,
+				DECC9E972E40DD8C0039B5A1 /* StatusesView.swift */,
+			);
+			path = Statuses;
+			sourceTree = "<group>";
+		};
+		DECC9E992E40DF430039B5A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9E9A2E40DF470039B5A1 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DECC9E9A2E40DF470039B5A1 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9E9B2E40DF4E0039B5A1 /* StatusesTableView.swift */,
+				DECC9E9F2E40DF650039B5A1 /* StatusesTableCell.swift */,
+				DECC9EA82E4112470039B5A1 /* StatusesTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DECC9EA12E40E6E60039B5A1 /* CreateStatus */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EA22E40E6FB0039B5A1 /* CreateStatusViewController.swift */,
+				DECC9EA42E40E7040039B5A1 /* CreateStatusViewModel.swift */,
+				DECC9EA62E40E7080039B5A1 /* CreateStatusView.swift */,
+			);
+			path = CreateStatus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,14 +706,19 @@
 			files = (
 				DE45058E2E3A28840085626C /* TakePhoto.swift in Sources */,
 				DE45059E2E3A28840085626C /* RequestReview.swift in Sources */,
+				DECC9EA52E40E7040039B5A1 /* CreateStatusViewModel.swift in Sources */,
 				DECC9E7F2E40C7C00039B5A1 /* MainTabItemButton.swift in Sources */,
 				DE4505A12E3A28840085626C /* NumberLaunches.swift in Sources */,
 				DE4505A42E3A28840085626C /* ScreenSize.swift in Sources */,
+				DECC9EA32E40E6FB0039B5A1 /* CreateStatusViewController.swift in Sources */,
 				DE45066F2E3A2CF80085626C /* AttendanceManager.swift in Sources */,
+				DECC9E8C2E40D28E0039B5A1 /* SettingsTableView.swift in Sources */,
+				DECC9E942E40DD830039B5A1 /* StatusesViewController.swift in Sources */,
 				DE4505B02E3A28840085626C /* Appearance.swift in Sources */,
 				DE4505B22E3A28840085626C /* SplashReceiptValidationObserver.swift in Sources */,
 				DECC9E752E40C78E0039B5A1 /* MainViewController.swift in Sources */,
 				DE4505CF2E3A28840085626C /* UIDevice+Extension.swift in Sources */,
+				DECC9EA72E40E7080039B5A1 /* CreateStatusView.swift in Sources */,
 				DE4505D32E3A28840085626C /* ObservableRetrySingle.swift in Sources */,
 				DE4505D42E3A28840085626C /* UIEdgeInsets+Extension.swift in Sources */,
 				DE4505DB2E3A28840085626C /* Scalable.swift in Sources */,
@@ -619,13 +730,15 @@
 				DE4505E32E3A28840085626C /* NavigationController.swift in Sources */,
 				DE4505E42E3A28840085626C /* Fonts.swift in Sources */,
 				DE4505E62E3A28840085626C /* UIApplication+Extension.swift in Sources */,
-				DE4506752E3A32B90085626C /* Color.swift in Sources */,
 				DE4506732E3A315E0085626C /* Status.swift in Sources */,
 				DE4505E72E3A28840085626C /* String+Extension.swift in Sources */,
+				DECC9E982E40DD8C0039B5A1 /* StatusesView.swift in Sources */,
 				DE4505EC2E3A28840085626C /* TextAttributes.swift in Sources */,
 				DE4505EE2E3A28840085626C /* NetworkError.swift in Sources */,
+				DECC9E8E2E40D2A10039B5A1 /* SettingsTableElement.swift in Sources */,
 				DECC9E792E40C79F0039B5A1 /* MainView.swift in Sources */,
 				DE4505F82E3A28840085626C /* AmplitudeManager.swift in Sources */,
+				DECC9E842E40D1050039B5A1 /* SettingsView.swift in Sources */,
 				DE4505FD2E3A28840085626C /* RxActivityIndicator.swift in Sources */,
 				DE4506002E3A28840085626C /* UIView+RxExtension.swift in Sources */,
 				DE4506012E3A28840085626C /* SceneDelegate.swift in Sources */,
@@ -634,6 +747,7 @@
 				DECC9E692E3E211A0039B5A1 /* StudentNote.swift in Sources */,
 				DE4506102E3A28840085626C /* UITapGestureRecognizer+Extension.swift in Sources */,
 				DECC9E712E3FC0C90039B5A1 /* AttendanceMediator.swift in Sources */,
+				DECC9E902E40D2A60039B5A1 /* SettingsTableCell.swift in Sources */,
 				DE4506712E3A2D2D0085626C /* Course.swift in Sources */,
 				DE4506152E3A28840085626C /* APIRequestBody.swift in Sources */,
 				DE4506772E3A33040085626C /* Student.swift in Sources */,
@@ -643,21 +757,27 @@
 				DECC9E7B2E40C7AB0039B5A1 /* MainCoordinator.swift in Sources */,
 				DE45061E2E3A28840085626C /* SplashView.swift in Sources */,
 				DE45062C2E3A28840085626C /* GlobalDefinitions.swift in Sources */,
+				DECC9E962E40DD880039B5A1 /* StatusesViewModel.swift in Sources */,
 				DE45062F2E3A28840085626C /* SignError.swift in Sources */,
+				DECC9EA92E4112470039B5A1 /* StatusesTableElement.swift in Sources */,
 				DECC9E632E3E101C0039B5A1 /* Attendance.swift in Sources */,
+				DECC9EA02E40DF650039B5A1 /* StatusesTableCell.swift in Sources */,
 				DE4506332E3A28840085626C /* ObservableAndSingle+Extension.swift in Sources */,
 				DE4506452E3A28840085626C /* UIColor+Extension.swift in Sources */,
 				DE45064C2E3A28840085626C /* AppDelegate.swift in Sources */,
+				DECC9E862E40D10C0039B5A1 /* SettingsViewController.swift in Sources */,
 				DECC9E6B2E3E2B8A0039B5A1 /* Enrollment.swift in Sources */,
 				DE45064D2E3A28840085626C /* ChoosePhotoFromGallery.swift in Sources */,
 				DE4506522E3A28840085626C /* SessionManager.swift in Sources */,
 				DE4506552E3A28840085626C /* ContentError.swift in Sources */,
 				DE4506562E3A28840085626C /* GradientButton.swift in Sources */,
+				DECC9E9C2E40DF4E0039B5A1 /* StatusesTableView.swift in Sources */,
 				DE4506582E3A28840085626C /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				DE4506602E3A28840085626C /* PaddingLabel.swift in Sources */,
 				DE4506612E3A28840085626C /* SplashViewController.swift in Sources */,
 				DE4506662E3A28840085626C /* GradientView.swift in Sources */,
 				DECC9E812E40C7CE0039B5A1 /* MainTabView.swift in Sources */,
+				DECC9E882E40D1110039B5A1 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,11 +814,12 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendenceTracker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Attendence Tracker";
+				INFOPLIST_KEY_CFBundleDisplayName = "Attendance Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -727,11 +848,12 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendenceTracker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Attendence Tracker";
+				INFOPLIST_KEY_CFBundleDisplayName = "Attendance Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

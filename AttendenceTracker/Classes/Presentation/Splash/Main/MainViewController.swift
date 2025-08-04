@@ -86,5 +86,16 @@ private extension MainViewController {
         mainView.tabView.selectedTab = selectedTab
         
         coordinator.change(tab: selectedTab)
+        
+        navigationItem.title = {
+            switch selectedTab {
+            case .courses:
+                return "Main.Courses".localized
+            case .students:
+                return "Main.Students".localized 
+            case .settings:
+                return "Main.Settings".localized
+            }
+        }()
     }
 }

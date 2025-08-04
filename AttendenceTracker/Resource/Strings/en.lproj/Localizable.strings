@@ -23,3 +23,21 @@
 "Main.Courses" = "Courses";
 "Main.Students" = "Students";
 "Main.Settings" = "Settings";
+
+// MARK: Settings
+"Settings.Statuses" = "Statuses";
+"Settings.TermsOfUse" = "Terms Of Use";
+"Settings.PrivacyPolicy" = "Privacy Policy";
+"Settings.ContactUs" = "Contact Us";
+
+// MARK: Statuses
+"Statuses.Title" = "Statuses";
+"Statuses.DefaultInfo" = "Long press on a status to make it default";
+"Statuses.CreateStatus" = "Add";
+"Statuses.System.Present" = "Present";
+"Statuses.System.Absent" = "Absent";
+"Statuses.AttemptDeleteSystemStatus" = "%@ is a system status and cannot be deleted.";
+
+// MARK: CreateStatus
+"CreateStatus.Placeholder" = "Status name";
+"CreateStatus.Default" = "default";

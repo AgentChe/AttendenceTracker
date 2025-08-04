@@ -8,6 +8,7 @@
 import UIKit
 
 final class MainTabView: UIView {
+    lazy var separator = makeSeparator()
     lazy var coursesItemButton = makeItemButton(tab: .courses)
     lazy var studentsItemButton = makeItemButton(tab: .students)
     lazy var settingsItemButton = makeItemButton(tab: .settings)
@@ -47,6 +48,13 @@ private extension MainTabView {
 private extension MainTabView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
+            separator.leadingAnchor.constraint(equalTo: leadingAnchor),
+            separator.trailingAnchor.constraint(equalTo: trailingAnchor),
+            separator.topAnchor.constraint(equalTo: topAnchor),
+            separator.heightAnchor.constraint(equalToConstant: 1.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
             coursesItemButton.leadingAnchor.constraint(equalTo: leadingAnchor),
             coursesItemButton.bottomAnchor.constraint(equalTo: bottomAnchor),
             coursesItemButton.topAnchor.constraint(equalTo: topAnchor),
@@ -71,6 +79,14 @@ private extension MainTabView {
 
 // MARK: Lazy initialization
 private extension MainTabView {
+    func makeSeparator() -> UIView {
+        let view = UIView()
+        view.backgroundColor = Appearance.mono200.withAlphaComponent(0.2)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
     func makeItemButton(tab: MainTabItemButton.Tab) -> MainTabItemButton {
         let view = MainTabItemButton(tab: tab)
         view.translatesAutoresizingMaskIntoConstraints = false

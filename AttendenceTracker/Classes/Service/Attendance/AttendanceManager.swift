@@ -10,7 +10,7 @@ import GRDB
 
 protocol AttendanceManagerProtocol {
     func fetchAllStatuses() -> Single<[Status]>
-    func createStatus(name: String, color: Color) -> Single<Status>
+    func createStatus(name: String) -> Single<Status>
     func delete(statusId: String) -> Single<Void>
     func setup(defaultStatus: Status) -> Single<Void>
     func defaultStatus() -> Single<Status>
@@ -76,7 +76,9 @@ extension AttendanceManager: AttendanceManagerProtocol {
                 let statuses = try self.dbQueue.read { db in
                     try Status.fetchAll(db)
                 }
-                single(.success(statuses))
+                
+                let all = Status.systems() + statuses
+                single(.success(all))
             } catch {
                 single(.failure(error))
             }
@@ -84,12 +86,12 @@ extension AttendanceManager: AttendanceManagerProtocol {
         }
     }
 
-    func createStatus(name: String, color: Color) -> Single<Status> {
+    func createStatus(name: String) -> Single<Status> {
         Single.create { single in
             let status = Status(
                 id: UUID().uuidString,
                 title: name,
-                color: color,
+                isSystem: false,
                 createdAt: Date().timeIntervalSince1970
             )
             do {
@@ -149,16 +151,13 @@ extension AttendanceManager: AttendanceManagerProtocol {
         Single.create { single in
             do {
                 let status = try self.dbQueue.read { db -> Status in
-                    guard let row = try Row.fetchOne(db, sql: "SELECT statusId FROM default_status"),
-                          let defId: String = row["statusId"] else {
-                        throw NSError(domain: "AttendanceManager", code: 0,
-                                      userInfo: [NSLocalizedDescriptionKey: "Default status not set"])
+                    if let row = try Row.fetchOne(db, sql: "SELECT statusId FROM default_status"),
+                       let defId: String = row["statusId"],
+                       let fetched = try Status.fetchOne(db, key: defId) {
+                        return fetched
                     }
-                    guard let status = try Status.fetchOne(db, key: defId) else {
-                        throw NSError(domain: "AttendanceManager", code: 0,
-                                      userInfo: [NSLocalizedDescriptionKey: "Default status not found"])
-                    }
-                    return status
+                    
+                    return Status.systems().first!
                 }
                 single(.success(status))
             } catch {
@@ -612,7 +611,7 @@ private extension AttendanceManager {
             try db.create(table: "Status") { t in
                 t.column("id", .text).primaryKey()
                 t.column("title", .text).notNull()
-                t.column("color", .text).notNull()
+                t.column("isSystem", .boolean).notNull()
                 t.column("createdAt", .double).notNull()
             }
             try db.create(table: "default_status") { t in
