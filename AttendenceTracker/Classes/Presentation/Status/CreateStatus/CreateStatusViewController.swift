@@ -7,7 +7,6 @@
 
 import UIKit
 import RxSwift
-import Toast_Swift
 
 final class CreateStatusViewController: UIViewController {
     private lazy var mainView = CreateStatusView()

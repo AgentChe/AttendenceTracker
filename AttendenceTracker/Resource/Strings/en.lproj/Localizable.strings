@@ -41,3 +41,20 @@
 // MARK: CreateStatus
 "CreateStatus.Placeholder" = "Status name";
 "CreateStatus.Default" = "default";
+
+// MARK: Students
+"Students.Add" = "Add student";
+"Students.Empty" = "Add your first student";
+
+// MARK: CreateStudent
+"CreateStudent.FirstName" = "First name";
+"CreateStudent.LastName" = "Last name";
+"CreateStudent.Email" = "Email";
+
+// MARK: StudentNotes
+"StudentNotes.Add" = "Add note";
+"StudentNotes.Empty" = "You haven't added any notes yet.";
+
+// MARK: CreateStudentNote
+"CreateStudentNote.Placeholder" = "Leave a note for %@";
+"CreateStudentNote.EmailReport" = "Email report";

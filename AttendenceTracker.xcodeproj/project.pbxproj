@@ -89,6 +89,26 @@
 		DECC9EA52E40E7040039B5A1 /* CreateStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EA42E40E7040039B5A1 /* CreateStatusViewModel.swift */; };
 		DECC9EA72E40E7080039B5A1 /* CreateStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EA62E40E7080039B5A1 /* CreateStatusView.swift */; };
 		DECC9EA92E4112470039B5A1 /* StatusesTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EA82E4112470039B5A1 /* StatusesTableElement.swift */; };
+		DECC9EAD2E41E3570039B5A1 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EAC2E41E3570039B5A1 /* StudentsViewController.swift */; };
+		DECC9EAF2E41E35F0039B5A1 /* StudentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EAE2E41E35F0039B5A1 /* StudentsViewModel.swift */; };
+		DECC9EB12E41E3630039B5A1 /* StudentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EB02E41E3630039B5A1 /* StudentsView.swift */; };
+		DECC9EB52E41E6D70039B5A1 /* StudentsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EB42E41E6D70039B5A1 /* StudentsTableView.swift */; };
+		DECC9EB72E41E6E00039B5A1 /* StudentsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EB62E41E6E00039B5A1 /* StudentsTableCell.swift */; };
+		DECC9EB92E41EDD50039B5A1 /* StudentsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EB82E41EDD50039B5A1 /* StudentsEmptyView.swift */; };
+		DECC9EBC2E41F03E0039B5A1 /* CreateStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EBB2E41F03E0039B5A1 /* CreateStudentViewController.swift */; };
+		DECC9EBE2E41F0460039B5A1 /* CreateStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EBD2E41F0460039B5A1 /* CreateStudentViewModel.swift */; };
+		DECC9EC02E41F04A0039B5A1 /* CreateStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EBF2E41F04A0039B5A1 /* CreateStudentView.swift */; };
+		DECC9ECD2E421B390039B5A1 /* StudentNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9ECC2E421B390039B5A1 /* StudentNotesViewController.swift */; };
+		DECC9ECF2E421B410039B5A1 /* StudentNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9ECE2E421B410039B5A1 /* StudentNotesViewModel.swift */; };
+		DECC9ED12E421B440039B5A1 /* StudentNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9ED02E421B440039B5A1 /* StudentNotesView.swift */; };
+		DECC9ED52E4232E50039B5A1 /* StudentNotesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9ED42E4232E50039B5A1 /* StudentNotesTableView.swift */; };
+		DECC9ED72E4232EB0039B5A1 /* StudentNotesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9ED62E4232EB0039B5A1 /* StudentNotesTableCell.swift */; };
+		DECC9ED92E4235570039B5A1 /* StudentNotesEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9ED82E4235570039B5A1 /* StudentNotesEmptyView.swift */; };
+		DECC9EDC2E42389E0039B5A1 /* CreateStudentNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EDB2E42389E0039B5A1 /* CreateStudentNoteViewController.swift */; };
+		DECC9EDE2E4238A60039B5A1 /* CreateStudentNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EDD2E4238A60039B5A1 /* CreateStudentNoteViewModel.swift */; };
+		DECC9EE02E4238AB0039B5A1 /* CreateStudentNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EDF2E4238AB0039B5A1 /* CreateStudentNoteView.swift */; };
+		DECC9EE32E4242DA0039B5A1 /* StudentNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EE22E4242DA0039B5A1 /* StudentNoteViewController.swift */; };
+		DECC9EE52E4242DF0039B5A1 /* StudentNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EE42E4242DF0039B5A1 /* StudentNoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +198,26 @@
 		DECC9EA42E40E7040039B5A1 /* CreateStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStatusViewModel.swift; sourceTree = "<group>"; };
 		DECC9EA62E40E7080039B5A1 /* CreateStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStatusView.swift; sourceTree = "<group>"; };
 		DECC9EA82E4112470039B5A1 /* StatusesTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesTableElement.swift; sourceTree = "<group>"; };
+		DECC9EAC2E41E3570039B5A1 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
+		DECC9EAE2E41E35F0039B5A1 /* StudentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewModel.swift; sourceTree = "<group>"; };
+		DECC9EB02E41E3630039B5A1 /* StudentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsView.swift; sourceTree = "<group>"; };
+		DECC9EB42E41E6D70039B5A1 /* StudentsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableView.swift; sourceTree = "<group>"; };
+		DECC9EB62E41E6E00039B5A1 /* StudentsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableCell.swift; sourceTree = "<group>"; };
+		DECC9EB82E41EDD50039B5A1 /* StudentsEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsEmptyView.swift; sourceTree = "<group>"; };
+		DECC9EBB2E41F03E0039B5A1 /* CreateStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentViewController.swift; sourceTree = "<group>"; };
+		DECC9EBD2E41F0460039B5A1 /* CreateStudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentViewModel.swift; sourceTree = "<group>"; };
+		DECC9EBF2E41F04A0039B5A1 /* CreateStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentView.swift; sourceTree = "<group>"; };
+		DECC9ECC2E421B390039B5A1 /* StudentNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNotesViewController.swift; sourceTree = "<group>"; };
+		DECC9ECE2E421B410039B5A1 /* StudentNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNotesViewModel.swift; sourceTree = "<group>"; };
+		DECC9ED02E421B440039B5A1 /* StudentNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNotesView.swift; sourceTree = "<group>"; };
+		DECC9ED42E4232E50039B5A1 /* StudentNotesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNotesTableView.swift; sourceTree = "<group>"; };
+		DECC9ED62E4232EB0039B5A1 /* StudentNotesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNotesTableCell.swift; sourceTree = "<group>"; };
+		DECC9ED82E4235570039B5A1 /* StudentNotesEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNotesEmptyView.swift; sourceTree = "<group>"; };
+		DECC9EDB2E42389E0039B5A1 /* CreateStudentNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentNoteViewController.swift; sourceTree = "<group>"; };
+		DECC9EDD2E4238A60039B5A1 /* CreateStudentNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentNoteViewModel.swift; sourceTree = "<group>"; };
+		DECC9EDF2E4238AB0039B5A1 /* CreateStudentNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentNoteView.swift; sourceTree = "<group>"; };
+		DECC9EE22E4242DA0039B5A1 /* StudentNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNoteViewController.swift; sourceTree = "<group>"; };
+		DECC9EE42E4242DF0039B5A1 /* StudentNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +446,7 @@
 		DE4505482E3A28840085626C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DECC9EAA2E41E3420039B5A1 /* Student */,
 				DECC9E912E40DD6F0039B5A1 /* Status */,
 				DECC9E722E40C76F0039B5A1 /* Splash */,
 			);
@@ -580,6 +621,105 @@
 			path = CreateStatus;
 			sourceTree = "<group>";
 		};
+		DECC9EAA2E41E3420039B5A1 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EE12E4242CB0039B5A1 /* StudentNote */,
+				DECC9EDA2E42388D0039B5A1 /* CreateStudentNote */,
+				DECC9ECB2E421B2C0039B5A1 /* StudentNotes */,
+				DECC9EBA2E41F0350039B5A1 /* CreateStudent */,
+				DECC9EAB2E41E34D0039B5A1 /* Students */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		DECC9EAB2E41E34D0039B5A1 /* Students */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EB22E41E4A60039B5A1 /* Views */,
+				DECC9EAC2E41E3570039B5A1 /* StudentsViewController.swift */,
+				DECC9EAE2E41E35F0039B5A1 /* StudentsViewModel.swift */,
+				DECC9EB02E41E3630039B5A1 /* StudentsView.swift */,
+			);
+			path = Students;
+			sourceTree = "<group>";
+		};
+		DECC9EB22E41E4A60039B5A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EB32E41E6CD0039B5A1 /* TableView */,
+				DECC9EB82E41EDD50039B5A1 /* StudentsEmptyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DECC9EB32E41E6CD0039B5A1 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EB42E41E6D70039B5A1 /* StudentsTableView.swift */,
+				DECC9EB62E41E6E00039B5A1 /* StudentsTableCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DECC9EBA2E41F0350039B5A1 /* CreateStudent */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EBB2E41F03E0039B5A1 /* CreateStudentViewController.swift */,
+				DECC9EBD2E41F0460039B5A1 /* CreateStudentViewModel.swift */,
+				DECC9EBF2E41F04A0039B5A1 /* CreateStudentView.swift */,
+			);
+			path = CreateStudent;
+			sourceTree = "<group>";
+		};
+		DECC9ECB2E421B2C0039B5A1 /* StudentNotes */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9ED22E4232D30039B5A1 /* Views */,
+				DECC9ECC2E421B390039B5A1 /* StudentNotesViewController.swift */,
+				DECC9ECE2E421B410039B5A1 /* StudentNotesViewModel.swift */,
+				DECC9ED02E421B440039B5A1 /* StudentNotesView.swift */,
+			);
+			path = StudentNotes;
+			sourceTree = "<group>";
+		};
+		DECC9ED22E4232D30039B5A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9ED32E4232DD0039B5A1 /* TableView */,
+				DECC9ED82E4235570039B5A1 /* StudentNotesEmptyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DECC9ED32E4232DD0039B5A1 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9ED42E4232E50039B5A1 /* StudentNotesTableView.swift */,
+				DECC9ED62E4232EB0039B5A1 /* StudentNotesTableCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DECC9EDA2E42388D0039B5A1 /* CreateStudentNote */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EDB2E42389E0039B5A1 /* CreateStudentNoteViewController.swift */,
+				DECC9EDD2E4238A60039B5A1 /* CreateStudentNoteViewModel.swift */,
+				DECC9EDF2E4238AB0039B5A1 /* CreateStudentNoteView.swift */,
+			);
+			path = CreateStudentNote;
+			sourceTree = "<group>";
+		};
+		DECC9EE12E4242CB0039B5A1 /* StudentNote */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EE22E4242DA0039B5A1 /* StudentNoteViewController.swift */,
+				DECC9EE42E4242DF0039B5A1 /* StudentNoteView.swift */,
+			);
+			path = StudentNote;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -706,27 +846,36 @@
 			files = (
 				DE45058E2E3A28840085626C /* TakePhoto.swift in Sources */,
 				DE45059E2E3A28840085626C /* RequestReview.swift in Sources */,
+				DECC9EE02E4238AB0039B5A1 /* CreateStudentNoteView.swift in Sources */,
+				DECC9ED12E421B440039B5A1 /* StudentNotesView.swift in Sources */,
 				DECC9EA52E40E7040039B5A1 /* CreateStatusViewModel.swift in Sources */,
 				DECC9E7F2E40C7C00039B5A1 /* MainTabItemButton.swift in Sources */,
 				DE4505A12E3A28840085626C /* NumberLaunches.swift in Sources */,
 				DE4505A42E3A28840085626C /* ScreenSize.swift in Sources */,
 				DECC9EA32E40E6FB0039B5A1 /* CreateStatusViewController.swift in Sources */,
 				DE45066F2E3A2CF80085626C /* AttendanceManager.swift in Sources */,
+				DECC9EAF2E41E35F0039B5A1 /* StudentsViewModel.swift in Sources */,
 				DECC9E8C2E40D28E0039B5A1 /* SettingsTableView.swift in Sources */,
 				DECC9E942E40DD830039B5A1 /* StatusesViewController.swift in Sources */,
 				DE4505B02E3A28840085626C /* Appearance.swift in Sources */,
 				DE4505B22E3A28840085626C /* SplashReceiptValidationObserver.swift in Sources */,
+				DECC9EC02E41F04A0039B5A1 /* CreateStudentView.swift in Sources */,
 				DECC9E752E40C78E0039B5A1 /* MainViewController.swift in Sources */,
 				DE4505CF2E3A28840085626C /* UIDevice+Extension.swift in Sources */,
 				DECC9EA72E40E7080039B5A1 /* CreateStatusView.swift in Sources */,
+				DECC9ED92E4235570039B5A1 /* StudentNotesEmptyView.swift in Sources */,
 				DE4505D32E3A28840085626C /* ObservableRetrySingle.swift in Sources */,
 				DE4505D42E3A28840085626C /* UIEdgeInsets+Extension.swift in Sources */,
 				DE4505DB2E3A28840085626C /* Scalable.swift in Sources */,
 				DE4505DE2E3A28840085626C /* Weak.swift in Sources */,
 				DE4505E12E3A28840085626C /* Collection+Extension.swift in Sources */,
+				DECC9EE52E4242DF0039B5A1 /* StudentNoteView.swift in Sources */,
 				DE4505E22E3A28840085626C /* RestAPITransport.swift in Sources */,
+				DECC9EB92E41EDD50039B5A1 /* StudentsEmptyView.swift in Sources */,
 				DECC9E6D2E3E2BAB0039B5A1 /* CourseStatus.swift in Sources */,
 				DECC9E6F2E3E2DE10039B5A1 /* AttendanceRecord.swift in Sources */,
+				DECC9ECF2E421B410039B5A1 /* StudentNotesViewModel.swift in Sources */,
+				DECC9EAD2E41E3570039B5A1 /* StudentsViewController.swift in Sources */,
 				DE4505E32E3A28840085626C /* NavigationController.swift in Sources */,
 				DE4505E42E3A28840085626C /* Fonts.swift in Sources */,
 				DE4505E62E3A28840085626C /* UIApplication+Extension.swift in Sources */,
@@ -735,20 +884,24 @@
 				DECC9E982E40DD8C0039B5A1 /* StatusesView.swift in Sources */,
 				DE4505EC2E3A28840085626C /* TextAttributes.swift in Sources */,
 				DE4505EE2E3A28840085626C /* NetworkError.swift in Sources */,
+				DECC9EBC2E41F03E0039B5A1 /* CreateStudentViewController.swift in Sources */,
 				DECC9E8E2E40D2A10039B5A1 /* SettingsTableElement.swift in Sources */,
 				DECC9E792E40C79F0039B5A1 /* MainView.swift in Sources */,
 				DE4505F82E3A28840085626C /* AmplitudeManager.swift in Sources */,
 				DECC9E842E40D1050039B5A1 /* SettingsView.swift in Sources */,
+				DECC9EB72E41E6E00039B5A1 /* StudentsTableCell.swift in Sources */,
 				DE4505FD2E3A28840085626C /* RxActivityIndicator.swift in Sources */,
 				DE4506002E3A28840085626C /* UIView+RxExtension.swift in Sources */,
 				DE4506012E3A28840085626C /* SceneDelegate.swift in Sources */,
 				DE4506032E3A28840085626C /* PaddingTextField.swift in Sources */,
+				DECC9EB52E41E6D70039B5A1 /* StudentsTableView.swift in Sources */,
 				DE4506062E3A28840085626C /* APIFormDataRequestBody.swift in Sources */,
 				DECC9E692E3E211A0039B5A1 /* StudentNote.swift in Sources */,
 				DE4506102E3A28840085626C /* UITapGestureRecognizer+Extension.swift in Sources */,
 				DECC9E712E3FC0C90039B5A1 /* AttendanceMediator.swift in Sources */,
 				DECC9E902E40D2A60039B5A1 /* SettingsTableCell.swift in Sources */,
 				DE4506712E3A2D2D0085626C /* Course.swift in Sources */,
+				DECC9ECD2E421B390039B5A1 /* StudentNotesViewController.swift in Sources */,
 				DE4506152E3A28840085626C /* APIRequestBody.swift in Sources */,
 				DE4506772E3A33040085626C /* Student.swift in Sources */,
 				DECC9E672E3E1B810039B5A1 /* AttendanceNote.swift in Sources */,
@@ -760,8 +913,14 @@
 				DECC9E962E40DD880039B5A1 /* StatusesViewModel.swift in Sources */,
 				DE45062F2E3A28840085626C /* SignError.swift in Sources */,
 				DECC9EA92E4112470039B5A1 /* StatusesTableElement.swift in Sources */,
+				DECC9EB12E41E3630039B5A1 /* StudentsView.swift in Sources */,
+				DECC9ED52E4232E50039B5A1 /* StudentNotesTableView.swift in Sources */,
 				DECC9E632E3E101C0039B5A1 /* Attendance.swift in Sources */,
+				DECC9EDE2E4238A60039B5A1 /* CreateStudentNoteViewModel.swift in Sources */,
+				DECC9EBE2E41F0460039B5A1 /* CreateStudentViewModel.swift in Sources */,
 				DECC9EA02E40DF650039B5A1 /* StatusesTableCell.swift in Sources */,
+				DECC9EDC2E42389E0039B5A1 /* CreateStudentNoteViewController.swift in Sources */,
+				DECC9EE32E4242DA0039B5A1 /* StudentNoteViewController.swift in Sources */,
 				DE4506332E3A28840085626C /* ObservableAndSingle+Extension.swift in Sources */,
 				DE4506452E3A28840085626C /* UIColor+Extension.swift in Sources */,
 				DE45064C2E3A28840085626C /* AppDelegate.swift in Sources */,
@@ -772,6 +931,7 @@
 				DE4506552E3A28840085626C /* ContentError.swift in Sources */,
 				DE4506562E3A28840085626C /* GradientButton.swift in Sources */,
 				DECC9E9C2E40DF4E0039B5A1 /* StatusesTableView.swift in Sources */,
+				DECC9ED72E4232EB0039B5A1 /* StudentNotesTableCell.swift in Sources */,
 				DE4506582E3A28840085626C /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				DE4506602E3A28840085626C /* PaddingLabel.swift in Sources */,
 				DE4506612E3A28840085626C /* SplashViewController.swift in Sources */,
@@ -811,6 +971,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2GY8CB289H;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendenceTracker/Info.plist;
@@ -825,7 +986,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = akosnt17.aienglish2.dev.AttendenceTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.attendanceTracker.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -845,6 +1006,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2GY8CB289H;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AttendenceTracker/Info.plist;
@@ -859,7 +1021,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = akosnt17.aienglish2.dev.AttendenceTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.attendanceTracker.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
