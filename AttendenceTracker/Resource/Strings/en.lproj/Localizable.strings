@@ -54,6 +54,7 @@
 // MARK: StudentNotes
 "StudentNotes.Add" = "Add note";
 "StudentNotes.Empty" = "You haven't added any notes yet.";
+"StudentNotes.Email.Subject" = "Notes at %@ %@";
 
 // MARK: CreateStudentNote
 "CreateStudentNote.Placeholder" = "Leave a note for %@";

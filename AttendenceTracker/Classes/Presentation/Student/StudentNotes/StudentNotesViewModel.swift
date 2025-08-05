@@ -12,6 +12,7 @@ final class StudentNotesViewModel {
     enum Action {
         case createNote(Student)
         case openNote(StudentNote)
+        case emailReport(Student, [StudentNote])
     }
     
     private let student: Driver<Student>
@@ -38,16 +39,20 @@ extension StudentNotesViewModel {
     }
     
     func configure(input: Input) -> Output {
-        Output(
+        let notes = makeElements(
+            student: student,
+            didDelete: input.didDelete
+        )
+        
+        return Output(
             action: makeAction(
                 student: student,
                 didTapAddNote: input.didTapAddNote,
-                didSelect: input.didSelect
+                didSelect: input.didSelect,
+                didTapEmailReport: input.didTapEmailReport,
+                notes: notes
             ),
-            elements: makeElements(
-                student: student,
-                didDelete: input.didDelete
-            )
+            elements: notes
         )
     }
 }
@@ -57,7 +62,9 @@ private extension StudentNotesViewModel {
     func makeAction(
         student: Driver<Student>,
         didTapAddNote: Signal<Void>,
-        didSelect: Signal<StudentNote>
+        didSelect: Signal<StudentNote>,
+        didTapEmailReport: Signal<Void>,
+        notes: Driver<[StudentNote]>
     ) -> Driver<Action> {
         let createNote = didTapAddNote
             .withLatestFrom(student)
@@ -68,8 +75,14 @@ private extension StudentNotesViewModel {
             .map { Action.openNote($0) }
             .asDriver(onErrorDriveWith: .never())
         
+        let emailReport = didTapEmailReport
+            .asDriver(onErrorDriveWith: .never())
+            .withLatestFrom(student)
+            .withLatestFrom(notes) { ($0, $1) }
+            .map { Action.emailReport($0, $1) }
+        
         return Driver
-            .merge(createNote, openNote)
+            .merge(createNote, openNote, emailReport)
     }
     
     func makeElements(student: Driver<Student>, didDelete: Signal<StudentNote>) -> Driver<[StudentNote]> {

@@ -109,6 +109,7 @@
 		DECC9EE02E4238AB0039B5A1 /* CreateStudentNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EDF2E4238AB0039B5A1 /* CreateStudentNoteView.swift */; };
 		DECC9EE32E4242DA0039B5A1 /* StudentNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EE22E4242DA0039B5A1 /* StudentNoteViewController.swift */; };
 		DECC9EE52E4242DF0039B5A1 /* StudentNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EE42E4242DF0039B5A1 /* StudentNoteView.swift */; };
+		DECC9EE82E4279B50039B5A1 /* StudentsNotesPDFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC9EE72E4279B50039B5A1 /* StudentsNotesPDFGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -218,6 +219,7 @@
 		DECC9EDF2E4238AB0039B5A1 /* CreateStudentNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentNoteView.swift; sourceTree = "<group>"; };
 		DECC9EE22E4242DA0039B5A1 /* StudentNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNoteViewController.swift; sourceTree = "<group>"; };
 		DECC9EE42E4242DF0039B5A1 /* StudentNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentNoteView.swift; sourceTree = "<group>"; };
+		DECC9EE72E4279B50039B5A1 /* StudentsNotesPDFGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsNotesPDFGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -675,6 +677,7 @@
 		DECC9ECB2E421B2C0039B5A1 /* StudentNotes */ = {
 			isa = PBXGroup;
 			children = (
+				DECC9EE62E4279A20039B5A1 /* Utils */,
 				DECC9ED22E4232D30039B5A1 /* Views */,
 				DECC9ECC2E421B390039B5A1 /* StudentNotesViewController.swift */,
 				DECC9ECE2E421B410039B5A1 /* StudentNotesViewModel.swift */,
@@ -718,6 +721,14 @@
 				DECC9EE42E4242DF0039B5A1 /* StudentNoteView.swift */,
 			);
 			path = StudentNote;
+			sourceTree = "<group>";
+		};
+		DECC9EE62E4279A20039B5A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DECC9EE72E4279B50039B5A1 /* StudentsNotesPDFGenerator.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -877,6 +888,7 @@
 				DECC9ECF2E421B410039B5A1 /* StudentNotesViewModel.swift in Sources */,
 				DECC9EAD2E41E3570039B5A1 /* StudentsViewController.swift in Sources */,
 				DE4505E32E3A28840085626C /* NavigationController.swift in Sources */,
+				DECC9EE82E4279B50039B5A1 /* StudentsNotesPDFGenerator.swift in Sources */,
 				DE4505E42E3A28840085626C /* Fonts.swift in Sources */,
 				DE4505E62E3A28840085626C /* UIApplication+Extension.swift in Sources */,
 				DE4506732E3A315E0085626C /* Status.swift in Sources */,

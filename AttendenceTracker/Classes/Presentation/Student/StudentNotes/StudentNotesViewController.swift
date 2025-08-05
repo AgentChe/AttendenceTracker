@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import MessageUI
 
 final class StudentNotesViewController: UIViewController {
     private lazy var mainView = StudentNotesView()
@@ -68,6 +69,13 @@ extension StudentNotesViewController {
     }
 }
 
+// MARK: MFMailComposeViewControllerDelegate
+extension StudentNotesViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}
+
 // MARK: Private
 private extension StudentNotesViewController {
     func action(_ action: StudentNotesViewModel.Action) {
@@ -78,6 +86,13 @@ private extension StudentNotesViewController {
         case .openNote(let note):
             let vc = StudentNoteViewController.make(studentNote: note)
             present(vc, animated: true)
+        case .emailReport(let student, let notes):
+            DispatchQueue.global().async {
+                let pdf = StudentsNotesPDFGenerator().generatePDF(for: student, notes: notes)
+                DispatchQueue.main.async { [weak self] in
+                    self?.sendEmail(with: pdf, to: student)
+                }
+            }
         }
     }
     
@@ -92,5 +107,19 @@ private extension StudentNotesViewController {
         item.customView?.heightAnchor.constraint(equalToConstant: 24.scale).isActive = true
         
         navigationItem.rightBarButtonItem = item
+    }
+    
+    func sendEmail(with pdfData: Data, to student: Student) {
+        guard MFMailComposeViewController.canSendMail() else { return }
+        
+        let mailVC = MFMailComposeViewController()
+        mailVC.mailComposeDelegate = self
+        mailVC.setSubject(String(format: "StudentNotes.Email.Subject".localized, student.firstName, student.lastName))
+        mailVC.setToRecipients([student.email])
+        mailVC.addAttachmentData(
+            pdfData, mimeType: "application/pdf",
+            fileName: "\(student.firstName)_\(student.lastName).pdf"
+        )
+        present(mailVC, animated: true)
     }
 }
