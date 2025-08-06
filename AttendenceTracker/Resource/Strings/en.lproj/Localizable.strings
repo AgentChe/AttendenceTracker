@@ -52,10 +52,18 @@
 "CreateStudent.Email" = "Email";
 
 // MARK: StudentNotes
-"StudentNotes.Add" = "Add note";
 "StudentNotes.Empty" = "You haven't added any notes yet.";
 "StudentNotes.Email.Subject" = "Notes at %@ %@";
 
 // MARK: CreateStudentNote
 "CreateStudentNote.Placeholder" = "Leave a note for %@";
 "CreateStudentNote.EmailReport" = "Email report";
+
+// MARK: Courses
+"Courses.Empty" = "Add your first course";
+"Courses.Add" = "Add course";
+
+// MARK: CreateCourse.Title
+"CreateCourse.Title" = "Create Course";
+"CreateCourse.Students.Title" = "Students:";
+"CreateCourse.Name.Placeholder" = "Course name";

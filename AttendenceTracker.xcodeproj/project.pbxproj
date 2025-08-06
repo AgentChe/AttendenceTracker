@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1E85E506DDCE19285E6A5BB2 /* Pods_AttendenceTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74175CE8A246579CAF2F95B4 /* Pods_AttendenceTracker.framework */; };
+		DE3E9D222E434815009DFF8B /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D212E434815009DFF8B /* CoursesViewController.swift */; };
+		DE3E9D242E43481D009DFF8B /* CoursesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D232E43481D009DFF8B /* CoursesViewModel.swift */; };
+		DE3E9D262E434820009DFF8B /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D252E434820009DFF8B /* CoursesView.swift */; };
+		DE3E9D2A2E434849009DFF8B /* CoursesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D292E434849009DFF8B /* CoursesTableView.swift */; };
+		DE3E9D2C2E434850009DFF8B /* CoursesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D2B2E434850009DFF8B /* CoursesTableCell.swift */; };
+		DE3E9D2E2E434A31009DFF8B /* CoursesEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D2D2E434A31009DFF8B /* CoursesEmptyView.swift */; };
+		DE3E9D312E434D93009DFF8B /* CreateCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D302E434D93009DFF8B /* CreateCourseViewController.swift */; };
+		DE3E9D332E434D98009DFF8B /* CreateCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D322E434D98009DFF8B /* CreateCourseViewModel.swift */; };
+		DE3E9D352E434D9D009DFF8B /* CreateCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D342E434D9D009DFF8B /* CreateCourseView.swift */; };
+		DE3E9D392E434EBA009DFF8B /* CreateCourseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D382E434EBA009DFF8B /* CreateCourseTableView.swift */; };
+		DE3E9D3B2E434EC7009DFF8B /* CreateCourseTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D3A2E434EC7009DFF8B /* CreateCourseTableElement.swift */; };
+		DE3E9D3E2E434EDE009DFF8B /* CCStudentsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D3D2E434EDE009DFF8B /* CCStudentsTitleCell.swift */; };
+		DE3E9D402E434EE5009DFF8B /* CCStudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D3F2E434EE5009DFF8B /* CCStudentCell.swift */; };
 		DE4504382E3A25A10085626C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE45042F2E3A25A10085626C /* Assets.xcassets */; };
 		DE45043A2E3A25A10085626C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4504322E3A25A10085626C /* LaunchScreen.storyboard */; };
 		DE4504492E3A287D0085626C /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4504432E3A287D0085626C /* IBMPlexSans-SemiBold.ttf */; };
@@ -116,6 +129,19 @@
 		290C1AF40C4E11B1B7FED7B3 /* Pods-AttendenceTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendenceTracker.debug.xcconfig"; path = "Target Support Files/Pods-AttendenceTracker/Pods-AttendenceTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		65A974CCFA3347A0772E9B60 /* Pods-AttendenceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendenceTracker.release.xcconfig"; path = "Target Support Files/Pods-AttendenceTracker/Pods-AttendenceTracker.release.xcconfig"; sourceTree = "<group>"; };
 		74175CE8A246579CAF2F95B4 /* Pods_AttendenceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttendenceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3E9D212E434815009DFF8B /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		DE3E9D232E43481D009DFF8B /* CoursesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewModel.swift; sourceTree = "<group>"; };
+		DE3E9D252E434820009DFF8B /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
+		DE3E9D292E434849009DFF8B /* CoursesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableView.swift; sourceTree = "<group>"; };
+		DE3E9D2B2E434850009DFF8B /* CoursesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableCell.swift; sourceTree = "<group>"; };
+		DE3E9D2D2E434A31009DFF8B /* CoursesEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesEmptyView.swift; sourceTree = "<group>"; };
+		DE3E9D302E434D93009DFF8B /* CreateCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseViewController.swift; sourceTree = "<group>"; };
+		DE3E9D322E434D98009DFF8B /* CreateCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseViewModel.swift; sourceTree = "<group>"; };
+		DE3E9D342E434D9D009DFF8B /* CreateCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseView.swift; sourceTree = "<group>"; };
+		DE3E9D382E434EBA009DFF8B /* CreateCourseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseTableView.swift; sourceTree = "<group>"; };
+		DE3E9D3A2E434EC7009DFF8B /* CreateCourseTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseTableElement.swift; sourceTree = "<group>"; };
+		DE3E9D3D2E434EDE009DFF8B /* CCStudentsTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCStudentsTitleCell.swift; sourceTree = "<group>"; };
+		DE3E9D3F2E434EE5009DFF8B /* CCStudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCStudentCell.swift; sourceTree = "<group>"; };
 		DE4504162E3A259B0085626C /* AttendenceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendenceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE45042F2E3A25A10085626C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4504302E3A25A10085626C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -249,6 +275,82 @@
 				74175CE8A246579CAF2F95B4 /* Pods_AttendenceTracker.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE3E9D1F2E4347FB009DFF8B /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D2F2E434D89009DFF8B /* CreateCourse */,
+				DE3E9D202E43480C009DFF8B /* Courses */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		DE3E9D202E43480C009DFF8B /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D272E43482D009DFF8B /* Views */,
+				DE3E9D212E434815009DFF8B /* CoursesViewController.swift */,
+				DE3E9D232E43481D009DFF8B /* CoursesViewModel.swift */,
+				DE3E9D252E434820009DFF8B /* CoursesView.swift */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		DE3E9D272E43482D009DFF8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D282E434833009DFF8B /* TableView */,
+				DE3E9D2D2E434A31009DFF8B /* CoursesEmptyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE3E9D282E434833009DFF8B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D292E434849009DFF8B /* CoursesTableView.swift */,
+				DE3E9D2B2E434850009DFF8B /* CoursesTableCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE3E9D2F2E434D89009DFF8B /* CreateCourse */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D362E434EAE009DFF8B /* Views */,
+				DE3E9D302E434D93009DFF8B /* CreateCourseViewController.swift */,
+				DE3E9D322E434D98009DFF8B /* CreateCourseViewModel.swift */,
+				DE3E9D342E434D9D009DFF8B /* CreateCourseView.swift */,
+			);
+			path = CreateCourse;
+			sourceTree = "<group>";
+		};
+		DE3E9D362E434EAE009DFF8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D372E434EB2009DFF8B /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE3E9D372E434EB2009DFF8B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D3C2E434ED0009DFF8B /* Cells */,
+				DE3E9D382E434EBA009DFF8B /* CreateCourseTableView.swift */,
+				DE3E9D3A2E434EC7009DFF8B /* CreateCourseTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE3E9D3C2E434ED0009DFF8B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D3D2E434EDE009DFF8B /* CCStudentsTitleCell.swift */,
+				DE3E9D3F2E434EE5009DFF8B /* CCStudentCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		DE45040D2E3A259B0085626C = {
@@ -448,6 +550,7 @@
 		DE4505482E3A28840085626C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE3E9D1F2E4347FB009DFF8B /* Courses */,
 				DECC9EAA2E41E3420039B5A1 /* Student */,
 				DECC9E912E40DD6F0039B5A1 /* Status */,
 				DECC9E722E40C76F0039B5A1 /* Splash */,
@@ -858,6 +961,7 @@
 				DE45058E2E3A28840085626C /* TakePhoto.swift in Sources */,
 				DE45059E2E3A28840085626C /* RequestReview.swift in Sources */,
 				DECC9EE02E4238AB0039B5A1 /* CreateStudentNoteView.swift in Sources */,
+				DE3E9D392E434EBA009DFF8B /* CreateCourseTableView.swift in Sources */,
 				DECC9ED12E421B440039B5A1 /* StudentNotesView.swift in Sources */,
 				DECC9EA52E40E7040039B5A1 /* CreateStatusViewModel.swift in Sources */,
 				DECC9E7F2E40C7C00039B5A1 /* MainTabItemButton.swift in Sources */,
@@ -874,6 +978,7 @@
 				DECC9E752E40C78E0039B5A1 /* MainViewController.swift in Sources */,
 				DE4505CF2E3A28840085626C /* UIDevice+Extension.swift in Sources */,
 				DECC9EA72E40E7080039B5A1 /* CreateStatusView.swift in Sources */,
+				DE3E9D262E434820009DFF8B /* CoursesView.swift in Sources */,
 				DECC9ED92E4235570039B5A1 /* StudentNotesEmptyView.swift in Sources */,
 				DE4505D32E3A28840085626C /* ObservableRetrySingle.swift in Sources */,
 				DE4505D42E3A28840085626C /* UIEdgeInsets+Extension.swift in Sources */,
@@ -882,6 +987,7 @@
 				DE4505E12E3A28840085626C /* Collection+Extension.swift in Sources */,
 				DECC9EE52E4242DF0039B5A1 /* StudentNoteView.swift in Sources */,
 				DE4505E22E3A28840085626C /* RestAPITransport.swift in Sources */,
+				DE3E9D3E2E434EDE009DFF8B /* CCStudentsTitleCell.swift in Sources */,
 				DECC9EB92E41EDD50039B5A1 /* StudentsEmptyView.swift in Sources */,
 				DECC9E6D2E3E2BAB0039B5A1 /* CourseStatus.swift in Sources */,
 				DECC9E6F2E3E2DE10039B5A1 /* AttendanceRecord.swift in Sources */,
@@ -898,6 +1004,7 @@
 				DE4505EE2E3A28840085626C /* NetworkError.swift in Sources */,
 				DECC9EBC2E41F03E0039B5A1 /* CreateStudentViewController.swift in Sources */,
 				DECC9E8E2E40D2A10039B5A1 /* SettingsTableElement.swift in Sources */,
+				DE3E9D332E434D98009DFF8B /* CreateCourseViewModel.swift in Sources */,
 				DECC9E792E40C79F0039B5A1 /* MainView.swift in Sources */,
 				DE4505F82E3A28840085626C /* AmplitudeManager.swift in Sources */,
 				DECC9E842E40D1050039B5A1 /* SettingsView.swift in Sources */,
@@ -910,8 +1017,10 @@
 				DE4506062E3A28840085626C /* APIFormDataRequestBody.swift in Sources */,
 				DECC9E692E3E211A0039B5A1 /* StudentNote.swift in Sources */,
 				DE4506102E3A28840085626C /* UITapGestureRecognizer+Extension.swift in Sources */,
+				DE3E9D402E434EE5009DFF8B /* CCStudentCell.swift in Sources */,
 				DECC9E712E3FC0C90039B5A1 /* AttendanceMediator.swift in Sources */,
 				DECC9E902E40D2A60039B5A1 /* SettingsTableCell.swift in Sources */,
+				DE3E9D312E434D93009DFF8B /* CreateCourseViewController.swift in Sources */,
 				DE4506712E3A2D2D0085626C /* Course.swift in Sources */,
 				DECC9ECD2E421B390039B5A1 /* StudentNotesViewController.swift in Sources */,
 				DE4506152E3A28840085626C /* APIRequestBody.swift in Sources */,
@@ -923,6 +1032,7 @@
 				DE45061E2E3A28840085626C /* SplashView.swift in Sources */,
 				DE45062C2E3A28840085626C /* GlobalDefinitions.swift in Sources */,
 				DECC9E962E40DD880039B5A1 /* StatusesViewModel.swift in Sources */,
+				DE3E9D3B2E434EC7009DFF8B /* CreateCourseTableElement.swift in Sources */,
 				DE45062F2E3A28840085626C /* SignError.swift in Sources */,
 				DECC9EA92E4112470039B5A1 /* StatusesTableElement.swift in Sources */,
 				DECC9EB12E41E3630039B5A1 /* StudentsView.swift in Sources */,
@@ -932,9 +1042,13 @@
 				DECC9EBE2E41F0460039B5A1 /* CreateStudentViewModel.swift in Sources */,
 				DECC9EA02E40DF650039B5A1 /* StatusesTableCell.swift in Sources */,
 				DECC9EDC2E42389E0039B5A1 /* CreateStudentNoteViewController.swift in Sources */,
+				DE3E9D2E2E434A31009DFF8B /* CoursesEmptyView.swift in Sources */,
 				DECC9EE32E4242DA0039B5A1 /* StudentNoteViewController.swift in Sources */,
 				DE4506332E3A28840085626C /* ObservableAndSingle+Extension.swift in Sources */,
 				DE4506452E3A28840085626C /* UIColor+Extension.swift in Sources */,
+				DE3E9D2C2E434850009DFF8B /* CoursesTableCell.swift in Sources */,
+				DE3E9D242E43481D009DFF8B /* CoursesViewModel.swift in Sources */,
+				DE3E9D2A2E434849009DFF8B /* CoursesTableView.swift in Sources */,
 				DE45064C2E3A28840085626C /* AppDelegate.swift in Sources */,
 				DECC9E862E40D10C0039B5A1 /* SettingsViewController.swift in Sources */,
 				DECC9E6B2E3E2B8A0039B5A1 /* Enrollment.swift in Sources */,
@@ -944,6 +1058,8 @@
 				DE4506562E3A28840085626C /* GradientButton.swift in Sources */,
 				DECC9E9C2E40DF4E0039B5A1 /* StatusesTableView.swift in Sources */,
 				DECC9ED72E4232EB0039B5A1 /* StudentNotesTableCell.swift in Sources */,
+				DE3E9D222E434815009DFF8B /* CoursesViewController.swift in Sources */,
+				DE3E9D352E434D9D009DFF8B /* CreateCourseView.swift in Sources */,
 				DE4506582E3A28840085626C /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				DE4506602E3A28840085626C /* PaddingLabel.swift in Sources */,
 				DE4506612E3A28840085626C /* SplashViewController.swift in Sources */,

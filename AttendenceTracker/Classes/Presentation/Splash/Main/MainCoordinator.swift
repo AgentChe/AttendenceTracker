@@ -8,7 +8,7 @@
 import UIKit
 
 final class MainViewCoordinator {
-    lazy var coursesVC = UIViewController()
+    lazy var coursesVC = CoursesViewController.make()
     lazy var studentsVC = StudentsViewController.make()
     lazy var settingsVC = SettingsViewController.make()
     
