@@ -11,6 +11,7 @@ import RxCocoa
 final class CreateCourseViewModel {
     enum Action {
         case createStudent
+        case createStatus
         case close
     }
     
@@ -21,7 +22,9 @@ final class CreateCourseViewModel {
 extension CreateCourseViewModel {
     struct Input {
         let didTapCreateStudent: Signal<Void>
+        let didTapCreateStatus: Signal<Void>
         let didChangeSelectedStudent: Signal<(Student, Bool)>
+        let didChangeSelectedStatus: Signal<(Status, Bool)>
         let didChangeCourseName: Signal<String>
         let didTapSave: Signal<Void>
     }
@@ -35,21 +38,28 @@ extension CreateCourseViewModel {
     func configure(input: Input) -> Output {
         let students = makeStudents()
         let selectedStudents = makeSelectedStudents(didChangeSelectedStudent: input.didChangeSelectedStudent)
+        let statuses = makeStatuses()
+        let selectedStatuses = makeSelectedStatuses(didChangeSelectedStatus: input.didChangeSelectedStatus)
         
         return Output(
             action: makeAction(
                 didTapCreateStudent: input.didTapCreateStudent,
+                didTapCreateStatus: input.didTapCreateStatus,
                 didTapSave: input.didTapSave,
                 courseName: input.didChangeCourseName,
-                selectedStudents: selectedStudents
+                selectedStudents: selectedStudents,
+                selectedStatuses: selectedStatuses
             ),
             elements: makeElements(
                 students: students,
-                selectedStudents: selectedStudents
+                selectedStudents: selectedStudents,
+                statuses: statuses,
+                selectedStatuses: selectedStatuses
             ),
             saveEnable: makeSaveEnable(
                 courseName: input.didChangeCourseName,
-                selectedStudents: selectedStudents
+                selectedStudents: selectedStudents,
+                selectedStatuses: selectedStatuses
             )
         )
     }
@@ -59,53 +69,74 @@ extension CreateCourseViewModel {
 private extension CreateCourseViewModel {
     func makeAction(
         didTapCreateStudent: Signal<Void>,
+        didTapCreateStatus: Signal<Void>,
         didTapSave: Signal<Void>,
         courseName: Signal<String>,
-        selectedStudents: Driver<[Student]>
+        selectedStudents: Driver<[Student]>,
+        selectedStatuses: Driver<[Status]>
     ) -> Driver<Action> {
         let createStudent = didTapCreateStudent
             .map { Action.createStudent }
+            .asDriver(onErrorDriveWith: .never())
+        
+        let createStatus = didTapCreateStatus
+            .map { Action.createStatus }
             .asDriver(onErrorDriveWith: .never())
         
         let save = didTapSave
             .asDriver(onErrorDriveWith: .never())
             .withLatestFrom(courseName)
             .withLatestFrom(selectedStudents) { ($0, $1) }
-            .flatMapLatest { [weak self] courseName, selectedStudents -> Driver<Action> in
+            .withLatestFrom(selectedStatuses) { ($0.0, $0.1, $1) }
+            .flatMapLatest { [weak self] courseName, selectedStudents, selectedStatuses -> Driver<Action> in
                 guard let self else { return .never() }
                 
                 return attendanceManager
                     .createCourse(name: courseName)
                     .flatMap { course -> Single<Void> in
-                        self.attendanceManager
-                            .setEnrollments(studentIds: selectedStudents.map { $0.id }, forCourseId: course.id)
+                        Single
+                            .zip(
+                                self.attendanceManager
+                                    .setEnrollments(studentIds: selectedStudents.map { $0.id }, forCourseId: course.id),
+                                
+                                self.attendanceManager
+                                    .setStatuses(ids: selectedStatuses.map { $0.id }, forCourseId: course.id)
+                            )
+                            .mapToVoid()
                     }
                     .map { Action.close }
                     .asDriver(onErrorDriveWith: .never())
             }
         
         return Driver
-            .merge(createStudent, save)
+            .merge(createStudent, createStatus, save)
     }
     
     func makeSaveEnable(
         courseName: Signal<String>,
-        selectedStudents: Driver<[Student]>
+        selectedStudents: Driver<[Student]>,
+        selectedStatuses: Driver<[Status]>
     ) -> Driver<Bool> {
         Driver
-            .combineLatest(courseName.asDriver(onErrorDriveWith: .never()), selectedStudents)
-            .map { courseName, selectedStudents -> Bool in
+            .combineLatest(
+                courseName.asDriver(onErrorDriveWith: .never()),
+                selectedStudents,
+                selectedStatuses
+            )
+            .map { courseName, selectedStudents, selectedStatuses -> Bool in
                 let cleanedName = courseName.trimmingCharacters(in: .whitespacesAndNewlines)
-                return !cleanedName.isEmpty && !selectedStudents.isEmpty
+                return !cleanedName.isEmpty && !selectedStudents.isEmpty && !selectedStatuses.isEmpty
             }
             .startWith(false)
     }
     
     func makeElements(
         students: Driver<[Student]>,
-        selectedStudents: Driver<[Student]>
+        selectedStudents: Driver<[Student]>,
+        statuses: Driver<[Status]>,
+        selectedStatuses: Driver<[Status]>
     ) -> Driver<[CreateCourseTableElement]> {
-        students
+        let studentsElements = students
             .withLatestFrom(selectedStudents) { ($0, $1) }
             .map { students, selectedStudents -> [CreateCourseTableElement] in
                 let studentsElements = students.map { student -> CreateCourseTableElement in
@@ -116,8 +147,26 @@ private extension CreateCourseViewModel {
                     return .student(studentElement)
                 }
                 
-                return [.title] + studentsElements
+                return [.title(.students)] + studentsElements
             }
+        
+        let statusesElements = statuses
+            .withLatestFrom(selectedStatuses) { ($0, $1) }
+            .map { statuses, selectedStatuses -> [CreateCourseTableElement] in
+                let statusesElements = statuses.map { status -> CreateCourseTableElement in
+                    let statusElement = CreateCourseTableStatusElement(
+                        status: status,
+                        checked: selectedStatuses.contains(where: { $0.id == status.id })
+                    )
+                    return .status(statusElement)
+                }
+                
+                return [.title(.statuses)] + statusesElements
+            }
+        
+        return Driver
+            .combineLatest(studentsElements, statusesElements)
+            .map { $0 + $1 }
     }
     
     func makeSelectedStudents(didChangeSelectedStudent: Signal<(Student, Bool)>) -> Driver<[Student]> {
@@ -175,6 +224,65 @@ private extension CreateCourseViewModel {
                     }
                     .map { students -> [Student] in
                         students.sorted(by: { $0.firstName < $1.firstName })
+                    }
+            }
+    }
+    
+    func makeSelectedStatuses(didChangeSelectedStatus: Signal<(Status, Bool)>) -> Driver<[Status]> {
+        didChangeSelectedStatus
+            .scan([]) { statuses, changed -> [Status] in
+                var statuses = statuses
+                
+                if changed.1 {
+                    statuses.append(changed.0)
+                } else {
+                    statuses.removeAll(where: { $0.id == changed.0.id })
+                }
+                
+                return statuses
+            }
+            .startWith([])
+            .asDriver(onErrorJustReturn: [])
+    }
+    
+    func makeStatuses() -> Driver<[Status]> {
+        enum Action {
+            case initial([Status])
+            case created(Status)
+            case deleted(String)
+        }
+        
+        let initial = attendanceManager
+            .fetchAllStatuses()
+            .asDriver(onErrorJustReturn: [])
+        
+        return initial
+            .flatMapLatest { initialStatuses -> Driver<[Status]> in
+                let created = AttendanceMediator.shared.didCreatedStatus
+                    .map { Action.created($0) }
+                    .asDriver(onErrorDriveWith: .never())
+                
+                let deletedTrigger = AttendanceMediator.shared.didDeletedStatusId
+                    .map { Action.deleted($0) }
+                    .asDriver(onErrorDriveWith: .never())
+                
+                return Driver
+                    .merge(created, deletedTrigger)
+                    .startWith(.initial(initialStatuses))
+                    .scan(initialStatuses) { statuses, action -> [Status] in
+                        switch action {
+                        case .initial(let statuses):
+                            return statuses
+                        case .created(let status):
+                            return statuses + [status]
+                        case .deleted(let statusId):
+                            var statuses = statuses
+                            statuses.removeAll(where: { $0.id == statusId })
+                            return statuses
+                        }
+                    }
+                    .map { statuses -> [Status] in
+                        statuses.sorted(by: { $0.title < $1.title })
                     }
             }
     }

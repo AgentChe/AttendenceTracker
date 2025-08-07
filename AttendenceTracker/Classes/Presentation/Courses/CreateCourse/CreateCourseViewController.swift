@@ -24,7 +24,9 @@ final class CreateCourseViewController: UIViewController {
         
         let output = viewModel.configure(input: CreateCourseViewModel.Input(
             didTapCreateStudent: mainView.tableView.didTapAddStudent,
+            didTapCreateStatus: mainView.tableView.didTapAddStatus,
             didChangeSelectedStudent: mainView.tableView.didChangeSelectedStudent,
+            didChangeSelectedStatus: mainView.tableView.didChangeSelectedStatus,
             didChangeCourseName: mainView.nameField.rx.text.map { $0 ?? "" }.asSignal(onErrorSignalWith: .never()),
             didTapSave: mainView.saveButton.rx.tap.asSignal()
         ))
@@ -66,6 +68,9 @@ private extension CreateCourseViewController {
         switch action {
         case .createStudent:
             let vc = CreateStudentViewController.make()
+            present(vc, animated: true)
+        case .createStatus:
+            let vc = CreateStatusViewController.make()
             present(vc, animated: true)
         case .close:
             navigationController?.popViewController(animated: true)

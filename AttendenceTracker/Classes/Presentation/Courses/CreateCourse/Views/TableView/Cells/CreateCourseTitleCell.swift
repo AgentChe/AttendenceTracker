@@ -1,5 +1,5 @@
 //
-//  CCStudentsTitleCell.swift
+//  CreateCourseTitleCell.swift
 //  AttendenceTracker
 //
 //  Created by Андрей Чернышев on 06.08.2025.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CCStudentsTitleCell: UITableViewCell {
+final class CreateCourseTitleCell: UITableViewCell {
     var didTapAdd: (() -> Void)?
     
     lazy var label = makeLabel()
@@ -15,8 +15,8 @@ final class CCStudentsTitleCell: UITableViewCell {
     
     private lazy var attrs = TextAttributes()
         .textColor(Appearance.mono200)
-        .font(Fonts.IBMPlexSans.regular(size: 16.scale))
-        .lineHeight(21.scale)
+        .font(Fonts.IBMPlexSans.semiBold(size: 18.scale))
+        .lineHeight(23.scale)
         .textAlignment(.left)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -31,8 +31,24 @@ final class CCStudentsTitleCell: UITableViewCell {
     }
 }
 
+// MARK: Public
+extension CreateCourseTitleCell {
+    func setup(element: CreateCourseTableTitleElement) {
+        let string: String = {
+            switch element {
+            case .students:
+                return "CreateCourse.Students.Title".localized
+            case .statuses:
+                return "CreateCourse.Statuses.Title".localized
+            }
+        }()
+        
+        label.attributedText = string.attributed(with: attrs)
+    }
+}
+
 // MARK: Private
-private extension CCStudentsTitleCell {
+private extension CreateCourseTitleCell {
     func initialize() {
         backgroundColor = UIColor.clear
         contentView.backgroundColor = UIColor.clear
@@ -47,7 +63,7 @@ private extension CCStudentsTitleCell {
 }
 
 // MARK: Make constraints
-private extension CCStudentsTitleCell {
+private extension CreateCourseTitleCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
@@ -66,16 +82,9 @@ private extension CCStudentsTitleCell {
 }
 
 // MARK: Lazy initialization
-private extension CCStudentsTitleCell {
+private extension CreateCourseTitleCell {
     func makeLabel() -> UILabel {
-        let attrs = TextAttributes()
-            .textColor(Appearance.mono200)
-            .font(Fonts.IBMPlexSans.semiBold(size: 18.scale))
-            .lineHeight(23.scale)
-            .textAlignment(.left)
-        
         let view = UILabel()
-        view.attributedText = "CreateCourse.Students.Title".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

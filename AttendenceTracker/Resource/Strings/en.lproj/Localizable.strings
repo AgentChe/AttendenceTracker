@@ -66,4 +66,16 @@
 // MARK: CreateCourse.Title
 "CreateCourse.Title" = "Create Course";
 "CreateCourse.Students.Title" = "Students:";
+"CreateCourse.Statuses.Title" = "Statuses:";
 "CreateCourse.Name.Placeholder" = "Course name";
+
+// MARK: Course
+"Course.CreateAttendance" = "Create attendance";
+"Course.Empty" = "You haven't added any attendances yet.";
+
+// MARK: Attendance
+"Attendance.Notes.Title" = "Notes:";
+"Attendance.EmailReport" = "Email report";
+
+// MARK: CreateAttendanceNote
+"CreateAttendanceNote.Placeholder" = "Leave a note";

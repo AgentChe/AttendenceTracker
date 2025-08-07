@@ -6,8 +6,14 @@
 //
 
 enum CreateCourseTableElement {
-    case title
+    case title(CreateCourseTableTitleElement)
     case student(CreateCourseTableStudentElement)
+    case status(CreateCourseTableStatusElement)
+}
+
+enum CreateCourseTableTitleElement {
+    case students
+    case statuses
 }
 
 final class CreateCourseTableStudentElement {
@@ -16,6 +22,16 @@ final class CreateCourseTableStudentElement {
     
     init(student: Student, checked: Bool) {
         self.student = student
+        self.checked = checked
+    }
+}
+
+final class CreateCourseTableStatusElement {
+    let status: Status
+    var checked: Bool
+    
+    init(status: Status, checked: Bool) {
+        self.status = status
         self.checked = checked
     }
 }

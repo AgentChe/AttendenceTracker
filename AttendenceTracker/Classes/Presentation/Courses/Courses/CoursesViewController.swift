@@ -60,7 +60,8 @@ private extension CoursesViewController {
             let vc = CreateCourseViewController.make()
             navigationController?.pushViewController(vc, animated: true)
         case .openCourse(let course):
-            break // TODO
+            let vc = CourseViewController.make(course: course)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

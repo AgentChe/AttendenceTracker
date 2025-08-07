@@ -19,8 +19,29 @@
 		DE3E9D352E434D9D009DFF8B /* CreateCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D342E434D9D009DFF8B /* CreateCourseView.swift */; };
 		DE3E9D392E434EBA009DFF8B /* CreateCourseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D382E434EBA009DFF8B /* CreateCourseTableView.swift */; };
 		DE3E9D3B2E434EC7009DFF8B /* CreateCourseTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D3A2E434EC7009DFF8B /* CreateCourseTableElement.swift */; };
-		DE3E9D3E2E434EDE009DFF8B /* CCStudentsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D3D2E434EDE009DFF8B /* CCStudentsTitleCell.swift */; };
-		DE3E9D402E434EE5009DFF8B /* CCStudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D3F2E434EE5009DFF8B /* CCStudentCell.swift */; };
+		DE3E9D3E2E434EDE009DFF8B /* CreateCourseTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D3D2E434EDE009DFF8B /* CreateCourseTitleCell.swift */; };
+		DE3E9D402E434EE5009DFF8B /* CreateCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D3F2E434EE5009DFF8B /* CreateCourseCell.swift */; };
+		DE3E9D432E449D5A009DFF8B /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D422E449D5A009DFF8B /* CourseViewController.swift */; };
+		DE3E9D452E449D63009DFF8B /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D442E449D63009DFF8B /* CourseViewModel.swift */; };
+		DE3E9D472E449D67009DFF8B /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D462E449D67009DFF8B /* CourseView.swift */; };
+		DE3E9D4B2E449F60009DFF8B /* CourseEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D4A2E449F60009DFF8B /* CourseEmptyView.swift */; };
+		DE3E9D4D2E449FA0009DFF8B /* CourseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D4C2E449FA0009DFF8B /* CourseTableView.swift */; };
+		DE3E9D4F2E449FA8009DFF8B /* CourseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D4E2E449FA8009DFF8B /* CourseTableCell.swift */; };
+		DE3E9D522E44ABAA009DFF8B /* CreateAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D512E44ABAA009DFF8B /* CreateAttendanceViewController.swift */; };
+		DE3E9D542E44ABB0009DFF8B /* CreateAttendanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D532E44ABB0009DFF8B /* CreateAttendanceViewModel.swift */; };
+		DE3E9D562E44ABB5009DFF8B /* CreateAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D552E44ABB5009DFF8B /* CreateAttendanceView.swift */; };
+		DE3E9D592E44B800009DFF8B /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D582E44B800009DFF8B /* AttendanceViewController.swift */; };
+		DE3E9D5B2E44B82A009DFF8B /* AttendanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D5A2E44B82A009DFF8B /* AttendanceViewModel.swift */; };
+		DE3E9D5D2E44B82D009DFF8B /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D5C2E44B82D009DFF8B /* AttendanceView.swift */; };
+		DE3E9D612E44E6BB009DFF8B /* AttendanceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D602E44E6BB009DFF8B /* AttendanceTableView.swift */; };
+		DE3E9D632E44E6C2009DFF8B /* AttendanceTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D622E44E6C2009DFF8B /* AttendanceTableElement.swift */; };
+		DE3E9D662E44E73C009DFF8B /* AttendanceTableNotesTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D652E44E73C009DFF8B /* AttendanceTableNotesTitleCell.swift */; };
+		DE3E9D682E44E849009DFF8B /* AttendanceTableNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D672E44E849009DFF8B /* AttendanceTableNoteCell.swift */; };
+		DE3E9D6B2E44EF53009DFF8B /* CreateAttendanceNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D6A2E44EF53009DFF8B /* CreateAttendanceNoteViewController.swift */; };
+		DE3E9D6D2E44EF58009DFF8B /* CreateAttendanceNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D6C2E44EF58009DFF8B /* CreateAttendanceNoteViewModel.swift */; };
+		DE3E9D6F2E44EF5C009DFF8B /* CreateAttendanceNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D6E2E44EF5C009DFF8B /* CreateAttendanceNoteView.swift */; };
+		DE3E9D722E44F443009DFF8B /* AttendanceNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D712E44F443009DFF8B /* AttendanceNoteViewController.swift */; };
+		DE3E9D742E44F447009DFF8B /* AttendanceNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D732E44F447009DFF8B /* AttendanceNoteView.swift */; };
 		DE4504382E3A25A10085626C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE45042F2E3A25A10085626C /* Assets.xcassets */; };
 		DE45043A2E3A25A10085626C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4504322E3A25A10085626C /* LaunchScreen.storyboard */; };
 		DE4504492E3A287D0085626C /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4504432E3A287D0085626C /* IBMPlexSans-SemiBold.ttf */; };
@@ -140,8 +161,29 @@
 		DE3E9D342E434D9D009DFF8B /* CreateCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseView.swift; sourceTree = "<group>"; };
 		DE3E9D382E434EBA009DFF8B /* CreateCourseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseTableView.swift; sourceTree = "<group>"; };
 		DE3E9D3A2E434EC7009DFF8B /* CreateCourseTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseTableElement.swift; sourceTree = "<group>"; };
-		DE3E9D3D2E434EDE009DFF8B /* CCStudentsTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCStudentsTitleCell.swift; sourceTree = "<group>"; };
-		DE3E9D3F2E434EE5009DFF8B /* CCStudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCStudentCell.swift; sourceTree = "<group>"; };
+		DE3E9D3D2E434EDE009DFF8B /* CreateCourseTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseTitleCell.swift; sourceTree = "<group>"; };
+		DE3E9D3F2E434EE5009DFF8B /* CreateCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCourseCell.swift; sourceTree = "<group>"; };
+		DE3E9D422E449D5A009DFF8B /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		DE3E9D442E449D63009DFF8B /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
+		DE3E9D462E449D67009DFF8B /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		DE3E9D4A2E449F60009DFF8B /* CourseEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseEmptyView.swift; sourceTree = "<group>"; };
+		DE3E9D4C2E449FA0009DFF8B /* CourseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableView.swift; sourceTree = "<group>"; };
+		DE3E9D4E2E449FA8009DFF8B /* CourseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableCell.swift; sourceTree = "<group>"; };
+		DE3E9D512E44ABAA009DFF8B /* CreateAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAttendanceViewController.swift; sourceTree = "<group>"; };
+		DE3E9D532E44ABB0009DFF8B /* CreateAttendanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAttendanceViewModel.swift; sourceTree = "<group>"; };
+		DE3E9D552E44ABB5009DFF8B /* CreateAttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAttendanceView.swift; sourceTree = "<group>"; };
+		DE3E9D582E44B800009DFF8B /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		DE3E9D5A2E44B82A009DFF8B /* AttendanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewModel.swift; sourceTree = "<group>"; };
+		DE3E9D5C2E44B82D009DFF8B /* AttendanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceView.swift; sourceTree = "<group>"; };
+		DE3E9D602E44E6BB009DFF8B /* AttendanceTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTableView.swift; sourceTree = "<group>"; };
+		DE3E9D622E44E6C2009DFF8B /* AttendanceTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTableElement.swift; sourceTree = "<group>"; };
+		DE3E9D652E44E73C009DFF8B /* AttendanceTableNotesTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTableNotesTitleCell.swift; sourceTree = "<group>"; };
+		DE3E9D672E44E849009DFF8B /* AttendanceTableNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTableNoteCell.swift; sourceTree = "<group>"; };
+		DE3E9D6A2E44EF53009DFF8B /* CreateAttendanceNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAttendanceNoteViewController.swift; sourceTree = "<group>"; };
+		DE3E9D6C2E44EF58009DFF8B /* CreateAttendanceNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAttendanceNoteViewModel.swift; sourceTree = "<group>"; };
+		DE3E9D6E2E44EF5C009DFF8B /* CreateAttendanceNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAttendanceNoteView.swift; sourceTree = "<group>"; };
+		DE3E9D712E44F443009DFF8B /* AttendanceNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceNoteViewController.swift; sourceTree = "<group>"; };
+		DE3E9D732E44F447009DFF8B /* AttendanceNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceNoteView.swift; sourceTree = "<group>"; };
 		DE4504162E3A259B0085626C /* AttendenceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendenceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE45042F2E3A25A10085626C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4504302E3A25A10085626C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -280,6 +322,11 @@
 		DE3E9D1F2E4347FB009DFF8B /* Courses */ = {
 			isa = PBXGroup;
 			children = (
+				DE3E9D702E44F436009DFF8B /* AttendanceNote */,
+				DE3E9D692E44EF4A009DFF8B /* CreateAttendanceNote */,
+				DE3E9D572E44B7F9009DFF8B /* Attendance */,
+				DE3E9D502E44AB99009DFF8B /* CreateAttendance */,
+				DE3E9D412E449D50009DFF8B /* Course */,
 				DE3E9D2F2E434D89009DFF8B /* CreateCourse */,
 				DE3E9D202E43480C009DFF8B /* Courses */,
 			);
@@ -347,10 +394,106 @@
 		DE3E9D3C2E434ED0009DFF8B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DE3E9D3D2E434EDE009DFF8B /* CCStudentsTitleCell.swift */,
-				DE3E9D3F2E434EE5009DFF8B /* CCStudentCell.swift */,
+				DE3E9D3D2E434EDE009DFF8B /* CreateCourseTitleCell.swift */,
+				DE3E9D3F2E434EE5009DFF8B /* CreateCourseCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE3E9D412E449D50009DFF8B /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D482E449ED1009DFF8B /* Views */,
+				DE3E9D422E449D5A009DFF8B /* CourseViewController.swift */,
+				DE3E9D442E449D63009DFF8B /* CourseViewModel.swift */,
+				DE3E9D462E449D67009DFF8B /* CourseView.swift */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		DE3E9D482E449ED1009DFF8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D492E449F52009DFF8B /* TableView */,
+				DE3E9D4A2E449F60009DFF8B /* CourseEmptyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE3E9D492E449F52009DFF8B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D4C2E449FA0009DFF8B /* CourseTableView.swift */,
+				DE3E9D4E2E449FA8009DFF8B /* CourseTableCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE3E9D502E44AB99009DFF8B /* CreateAttendance */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D512E44ABAA009DFF8B /* CreateAttendanceViewController.swift */,
+				DE3E9D532E44ABB0009DFF8B /* CreateAttendanceViewModel.swift */,
+				DE3E9D552E44ABB5009DFF8B /* CreateAttendanceView.swift */,
+			);
+			path = CreateAttendance;
+			sourceTree = "<group>";
+		};
+		DE3E9D572E44B7F9009DFF8B /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D5E2E44BB33009DFF8B /* Views */,
+				DE3E9D582E44B800009DFF8B /* AttendanceViewController.swift */,
+				DE3E9D5A2E44B82A009DFF8B /* AttendanceViewModel.swift */,
+				DE3E9D5C2E44B82D009DFF8B /* AttendanceView.swift */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		DE3E9D5E2E44BB33009DFF8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D5F2E44E6B1009DFF8B /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE3E9D5F2E44E6B1009DFF8B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D642E44E6C4009DFF8B /* Cells */,
+				DE3E9D602E44E6BB009DFF8B /* AttendanceTableView.swift */,
+				DE3E9D622E44E6C2009DFF8B /* AttendanceTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE3E9D642E44E6C4009DFF8B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D652E44E73C009DFF8B /* AttendanceTableNotesTitleCell.swift */,
+				DE3E9D672E44E849009DFF8B /* AttendanceTableNoteCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE3E9D692E44EF4A009DFF8B /* CreateAttendanceNote */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D6A2E44EF53009DFF8B /* CreateAttendanceNoteViewController.swift */,
+				DE3E9D6C2E44EF58009DFF8B /* CreateAttendanceNoteViewModel.swift */,
+				DE3E9D6E2E44EF5C009DFF8B /* CreateAttendanceNoteView.swift */,
+			);
+			path = CreateAttendanceNote;
+			sourceTree = "<group>";
+		};
+		DE3E9D702E44F436009DFF8B /* AttendanceNote */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D712E44F443009DFF8B /* AttendanceNoteViewController.swift */,
+				DE3E9D732E44F447009DFF8B /* AttendanceNoteView.swift */,
+			);
+			path = AttendanceNote;
 			sourceTree = "<group>";
 		};
 		DE45040D2E3A259B0085626C = {
@@ -964,11 +1107,13 @@
 				DE3E9D392E434EBA009DFF8B /* CreateCourseTableView.swift in Sources */,
 				DECC9ED12E421B440039B5A1 /* StudentNotesView.swift in Sources */,
 				DECC9EA52E40E7040039B5A1 /* CreateStatusViewModel.swift in Sources */,
+				DE3E9D6B2E44EF53009DFF8B /* CreateAttendanceNoteViewController.swift in Sources */,
 				DECC9E7F2E40C7C00039B5A1 /* MainTabItemButton.swift in Sources */,
 				DE4505A12E3A28840085626C /* NumberLaunches.swift in Sources */,
 				DE4505A42E3A28840085626C /* ScreenSize.swift in Sources */,
 				DECC9EA32E40E6FB0039B5A1 /* CreateStatusViewController.swift in Sources */,
 				DE45066F2E3A2CF80085626C /* AttendanceManager.swift in Sources */,
+				DE3E9D4B2E449F60009DFF8B /* CourseEmptyView.swift in Sources */,
 				DECC9EAF2E41E35F0039B5A1 /* StudentsViewModel.swift in Sources */,
 				DECC9E8C2E40D28E0039B5A1 /* SettingsTableView.swift in Sources */,
 				DECC9E942E40DD830039B5A1 /* StatusesViewController.swift in Sources */,
@@ -978,6 +1123,7 @@
 				DECC9E752E40C78E0039B5A1 /* MainViewController.swift in Sources */,
 				DE4505CF2E3A28840085626C /* UIDevice+Extension.swift in Sources */,
 				DECC9EA72E40E7080039B5A1 /* CreateStatusView.swift in Sources */,
+				DE3E9D472E449D67009DFF8B /* CourseView.swift in Sources */,
 				DE3E9D262E434820009DFF8B /* CoursesView.swift in Sources */,
 				DECC9ED92E4235570039B5A1 /* StudentNotesEmptyView.swift in Sources */,
 				DE4505D32E3A28840085626C /* ObservableRetrySingle.swift in Sources */,
@@ -985,9 +1131,10 @@
 				DE4505DB2E3A28840085626C /* Scalable.swift in Sources */,
 				DE4505DE2E3A28840085626C /* Weak.swift in Sources */,
 				DE4505E12E3A28840085626C /* Collection+Extension.swift in Sources */,
+				DE3E9D4D2E449FA0009DFF8B /* CourseTableView.swift in Sources */,
 				DECC9EE52E4242DF0039B5A1 /* StudentNoteView.swift in Sources */,
 				DE4505E22E3A28840085626C /* RestAPITransport.swift in Sources */,
-				DE3E9D3E2E434EDE009DFF8B /* CCStudentsTitleCell.swift in Sources */,
+				DE3E9D3E2E434EDE009DFF8B /* CreateCourseTitleCell.swift in Sources */,
 				DECC9EB92E41EDD50039B5A1 /* StudentsEmptyView.swift in Sources */,
 				DECC9E6D2E3E2BAB0039B5A1 /* CourseStatus.swift in Sources */,
 				DECC9E6F2E3E2DE10039B5A1 /* AttendanceRecord.swift in Sources */,
@@ -996,6 +1143,7 @@
 				DE4505E32E3A28840085626C /* NavigationController.swift in Sources */,
 				DECC9EE82E4279B50039B5A1 /* StudentsNotesPDFGenerator.swift in Sources */,
 				DE4505E42E3A28840085626C /* Fonts.swift in Sources */,
+				DE3E9D5B2E44B82A009DFF8B /* AttendanceViewModel.swift in Sources */,
 				DE4505E62E3A28840085626C /* UIApplication+Extension.swift in Sources */,
 				DE4506732E3A315E0085626C /* Status.swift in Sources */,
 				DE4505E72E3A28840085626C /* String+Extension.swift in Sources */,
@@ -1003,6 +1151,8 @@
 				DE4505EC2E3A28840085626C /* TextAttributes.swift in Sources */,
 				DE4505EE2E3A28840085626C /* NetworkError.swift in Sources */,
 				DECC9EBC2E41F03E0039B5A1 /* CreateStudentViewController.swift in Sources */,
+				DE3E9D5D2E44B82D009DFF8B /* AttendanceView.swift in Sources */,
+				DE3E9D522E44ABAA009DFF8B /* CreateAttendanceViewController.swift in Sources */,
 				DECC9E8E2E40D2A10039B5A1 /* SettingsTableElement.swift in Sources */,
 				DE3E9D332E434D98009DFF8B /* CreateCourseViewModel.swift in Sources */,
 				DECC9E792E40C79F0039B5A1 /* MainView.swift in Sources */,
@@ -1017,7 +1167,7 @@
 				DE4506062E3A28840085626C /* APIFormDataRequestBody.swift in Sources */,
 				DECC9E692E3E211A0039B5A1 /* StudentNote.swift in Sources */,
 				DE4506102E3A28840085626C /* UITapGestureRecognizer+Extension.swift in Sources */,
-				DE3E9D402E434EE5009DFF8B /* CCStudentCell.swift in Sources */,
+				DE3E9D402E434EE5009DFF8B /* CreateCourseCell.swift in Sources */,
 				DECC9E712E3FC0C90039B5A1 /* AttendanceMediator.swift in Sources */,
 				DECC9E902E40D2A60039B5A1 /* SettingsTableCell.swift in Sources */,
 				DE3E9D312E434D93009DFF8B /* CreateCourseViewController.swift in Sources */,
@@ -1033,8 +1183,11 @@
 				DE45062C2E3A28840085626C /* GlobalDefinitions.swift in Sources */,
 				DECC9E962E40DD880039B5A1 /* StatusesViewModel.swift in Sources */,
 				DE3E9D3B2E434EC7009DFF8B /* CreateCourseTableElement.swift in Sources */,
+				DE3E9D612E44E6BB009DFF8B /* AttendanceTableView.swift in Sources */,
+				DE3E9D592E44B800009DFF8B /* AttendanceViewController.swift in Sources */,
 				DE45062F2E3A28840085626C /* SignError.swift in Sources */,
 				DECC9EA92E4112470039B5A1 /* StatusesTableElement.swift in Sources */,
+				DE3E9D452E449D63009DFF8B /* CourseViewModel.swift in Sources */,
 				DECC9EB12E41E3630039B5A1 /* StudentsView.swift in Sources */,
 				DECC9ED52E4232E50039B5A1 /* StudentNotesTableView.swift in Sources */,
 				DECC9E632E3E101C0039B5A1 /* Attendance.swift in Sources */,
@@ -1042,24 +1195,35 @@
 				DECC9EBE2E41F0460039B5A1 /* CreateStudentViewModel.swift in Sources */,
 				DECC9EA02E40DF650039B5A1 /* StatusesTableCell.swift in Sources */,
 				DECC9EDC2E42389E0039B5A1 /* CreateStudentNoteViewController.swift in Sources */,
+				DE3E9D542E44ABB0009DFF8B /* CreateAttendanceViewModel.swift in Sources */,
 				DE3E9D2E2E434A31009DFF8B /* CoursesEmptyView.swift in Sources */,
 				DECC9EE32E4242DA0039B5A1 /* StudentNoteViewController.swift in Sources */,
+				DE3E9D432E449D5A009DFF8B /* CourseViewController.swift in Sources */,
 				DE4506332E3A28840085626C /* ObservableAndSingle+Extension.swift in Sources */,
+				DE3E9D632E44E6C2009DFF8B /* AttendanceTableElement.swift in Sources */,
 				DE4506452E3A28840085626C /* UIColor+Extension.swift in Sources */,
 				DE3E9D2C2E434850009DFF8B /* CoursesTableCell.swift in Sources */,
 				DE3E9D242E43481D009DFF8B /* CoursesViewModel.swift in Sources */,
 				DE3E9D2A2E434849009DFF8B /* CoursesTableView.swift in Sources */,
 				DE45064C2E3A28840085626C /* AppDelegate.swift in Sources */,
+				DE3E9D6F2E44EF5C009DFF8B /* CreateAttendanceNoteView.swift in Sources */,
 				DECC9E862E40D10C0039B5A1 /* SettingsViewController.swift in Sources */,
 				DECC9E6B2E3E2B8A0039B5A1 /* Enrollment.swift in Sources */,
 				DE45064D2E3A28840085626C /* ChoosePhotoFromGallery.swift in Sources */,
+				DE3E9D742E44F447009DFF8B /* AttendanceNoteView.swift in Sources */,
+				DE3E9D722E44F443009DFF8B /* AttendanceNoteViewController.swift in Sources */,
 				DE4506522E3A28840085626C /* SessionManager.swift in Sources */,
+				DE3E9D6D2E44EF58009DFF8B /* CreateAttendanceNoteViewModel.swift in Sources */,
 				DE4506552E3A28840085626C /* ContentError.swift in Sources */,
+				DE3E9D682E44E849009DFF8B /* AttendanceTableNoteCell.swift in Sources */,
 				DE4506562E3A28840085626C /* GradientButton.swift in Sources */,
 				DECC9E9C2E40DF4E0039B5A1 /* StatusesTableView.swift in Sources */,
 				DECC9ED72E4232EB0039B5A1 /* StudentNotesTableCell.swift in Sources */,
 				DE3E9D222E434815009DFF8B /* CoursesViewController.swift in Sources */,
+				DE3E9D662E44E73C009DFF8B /* AttendanceTableNotesTitleCell.swift in Sources */,
+				DE3E9D562E44ABB5009DFF8B /* CreateAttendanceView.swift in Sources */,
 				DE3E9D352E434D9D009DFF8B /* CreateCourseView.swift in Sources */,
+				DE3E9D4F2E449FA8009DFF8B /* CourseTableCell.swift in Sources */,
 				DE4506582E3A28840085626C /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				DE4506602E3A28840085626C /* PaddingLabel.swift in Sources */,
 				DE4506612E3A28840085626C /* SplashViewController.swift in Sources */,

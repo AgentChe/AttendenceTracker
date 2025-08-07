@@ -13,7 +13,9 @@ final class CreateCourseTableView: UITableView {
     private lazy var elements = [CreateCourseTableElement]()
     
     private lazy var didTapAddStudentTrigger = PublishRelay<Void>()
+    private lazy var didTapAddStatusTrigger = PublishRelay<Void>()
     private lazy var didChangeSelectedStudentTrigger = PublishRelay<(Student, Bool)>()
+    private lazy var didChangeSelectedStatusTrigger = PublishRelay<(Status, Bool)>()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -38,8 +40,16 @@ extension CreateCourseTableView {
         didTapAddStudentTrigger.asSignal()
     }
     
+    var didTapAddStatus: Signal<Void> {
+        didTapAddStatusTrigger.asSignal()
+    }
+    
     var didChangeSelectedStudent: Signal<(Student, Bool)> {
         didChangeSelectedStudentTrigger.asSignal()
+    }
+    
+    var didChangeSelectedStatus: Signal<(Status, Bool)> {
+        didChangeSelectedStatusTrigger.asSignal()
     }
 }
 
@@ -51,14 +61,24 @@ extension CreateCourseTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch elements[indexPath.row] {
-        case .title:
-            let cell = dequeueReusableCell(withIdentifier: String(describing: CCStudentsTitleCell.self), for: indexPath) as! CCStudentsTitleCell
+        case .title(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: CreateCourseTitleCell.self), for: indexPath) as! CreateCourseTitleCell
+            cell.setup(element: element)
             cell.didTapAdd = { [weak self] in
-                self?.didTapAddStudentTrigger.accept(Void())
+                switch element {
+                case .students:
+                    self?.didTapAddStudentTrigger.accept(Void())
+                case .statuses:
+                    self?.didTapAddStatusTrigger.accept(Void())
+                }
             }
             return cell
         case .student(let element):
-            let cell = dequeueReusableCell(withIdentifier: String(describing: CCStudentCell.self), for: indexPath) as! CCStudentCell
+            let cell = dequeueReusableCell(withIdentifier: String(describing: CreateCourseCell.self), for: indexPath) as! CreateCourseCell
+            cell.setup(element: element)
+            return cell
+        case .status(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: CreateCourseCell.self), for: indexPath) as! CreateCourseCell
             cell.setup(element: element)
             return cell
         }
@@ -72,13 +92,22 @@ extension CreateCourseTableView: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard case .student(let element) = elements[indexPath.row] else { return }
-        
-        element.checked.toggle()
-        
-        reloadRows(at: [indexPath], with: .automatic)
-        
-        didChangeSelectedStudentTrigger.accept((element.student, element.checked))
+        switch elements[indexPath.row] {
+        case .title:
+            break
+        case .student(let element):
+            element.checked.toggle()
+            
+            reloadRows(at: [indexPath], with: .automatic)
+            
+            didChangeSelectedStudentTrigger.accept((element.student, element.checked))
+        case .status(let element):
+            element.checked.toggle()
+            
+            reloadRows(at: [indexPath], with: .automatic)
+            
+            didChangeSelectedStatusTrigger.accept((element.status, element.checked))
+        }
     }
 }
 
@@ -92,8 +121,8 @@ private extension CreateCourseTableView {
         separatorInset = UIEdgeInsets(horizontal: 16.scale)
         showsVerticalScrollIndicator = false
         
-        register(CCStudentsTitleCell.self, forCellReuseIdentifier: String(describing: CCStudentsTitleCell.self))
-        register(CCStudentCell.self, forCellReuseIdentifier: String(describing: CCStudentCell.self))
+        register(CreateCourseTitleCell.self, forCellReuseIdentifier: String(describing: CreateCourseTitleCell.self))
+        register(CreateCourseCell.self, forCellReuseIdentifier: String(describing: CreateCourseCell.self))
         
         dataSource = self
         delegate = self
