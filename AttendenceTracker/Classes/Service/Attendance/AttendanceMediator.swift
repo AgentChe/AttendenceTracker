@@ -25,9 +25,6 @@ final class AttendanceMediator {
     private lazy var didCreatedAttendanceTrigger = PublishRelay<Attendance>()
     private lazy var didDeletedAttendanceIdTrigger = PublishRelay<String>()
     
-    private lazy var didCreatedAttendanceRecordTrigger = PublishRelay<AttendanceRecord>()
-    private lazy var didDeletedAttendanceRecordIdTrigger = PublishRelay<String>()
-    
     private lazy var didCreatedAttendanceNoteTrigger = PublishRelay<AttendanceNote>()
     private lazy var didDeletedAttendanceNoteIdTrigger = PublishRelay<String>()
     
@@ -73,14 +70,6 @@ extension AttendanceMediator {
     
     func deleted(attendanceId: String) {
         didDeletedAttendanceIdTrigger.accept(attendanceId)
-    }
-    
-    func created(attendanceRecord: AttendanceRecord) {
-        didCreatedAttendanceRecordTrigger.accept(attendanceRecord)
-    }
-    
-    func deleted(attendanceRecordId: String) {
-        didDeletedAttendanceRecordIdTrigger.accept(attendanceRecordId)
     }
     
     func created(attendanceNote: AttendanceNote) {
@@ -137,14 +126,6 @@ extension AttendanceMediator {
     
     var didDeletedAttendanceId: Signal<String> {
         didDeletedAttendanceIdTrigger.asSignal()
-    }
-    
-    var didCreatedAttendanceRecord: Signal<AttendanceRecord> {
-        didCreatedAttendanceRecordTrigger.asSignal()
-    }
-    
-    var didDeletedAttendanceRecordId: Signal<String> {
-        didDeletedAttendanceRecordIdTrigger.asSignal()
     }
     
     var didCreatedAttendanceNote: Signal<AttendanceNote> {

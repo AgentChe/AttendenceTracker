@@ -35,12 +35,11 @@ protocol AttendanceManagerProtocol {
     func delete(attendanceId: String) -> Single<Void>
     func fetchAttendances(forCourseId courseId: String) -> Single<[Attendance]>
 
-    func createAttendanceRecord(
+    func createAttendanceRecords(
         attendanceId: String,
-        studentId: String,
-        statusId: String
-    ) -> Single<AttendanceRecord>
-    func delete(attendanceRecordId: String) -> Single<Void>
+        records: [(statusId: String, studentId: String)]
+    ) -> Single<[AttendanceRecord]>
+    func update(attendanceRecordId: String, newStatusId: String) -> Single<AttendanceRecord>
     func fetchAttendanceRecords(forAttendanceId attendanceId: String) -> Single<[AttendanceRecord]>
 
     func createAttendanceNote(attendanceId: String, text: String) -> Single<AttendanceNote>
@@ -439,45 +438,76 @@ extension AttendanceManager: AttendanceManagerProtocol {
             return Disposables.create()
         }
     }
-
-    func createAttendanceRecord(
+    
+    func createAttendanceRecords(
         attendanceId: String,
-        studentId: String,
-        statusId: String
-    ) -> Single<AttendanceRecord> {
+        records: [(statusId: String, studentId: String)]
+    ) -> Single<[AttendanceRecord]> {
         Single.create { single in
-            let record = AttendanceRecord(
-                id: UUID().uuidString,
-                attendanceId: attendanceId,
-                studentId: studentId,
-                statusId: statusId
-            )
+            var createdRecords: [AttendanceRecord] = []
+            
             do {
                 try self.dbQueue.write { db in
-                    try record.insert(db)
+                    for item in records {
+                        let record = AttendanceRecord(
+                            id: UUID().uuidString,
+                            attendanceId: attendanceId,
+                            studentId: item.studentId,
+                            statusId: item.statusId
+                        )
+                        try record.insert(db)
+                        createdRecords.append(record)
+                    }
                 }
-                single(.success(record))
                 
-                AttendanceMediator.shared.created(attendanceRecord: record)
+                single(.success(createdRecords))
             } catch {
                 single(.failure(error))
             }
+            
             return Disposables.create()
         }
     }
 
-    func delete(attendanceRecordId: String) -> Single<Void> {
+    func update(
+        attendanceRecordId: String,
+        newStatusId: String
+    ) -> Single<AttendanceRecord> {
         Single.create { single in
+            var updatedRecord: AttendanceRecord?
+            
             do {
                 try self.dbQueue.write { db in
-                    try AttendanceRecord.deleteOne(db, key: attendanceRecordId)
+                    guard let existing = try AttendanceRecord.fetchOne(db, key: attendanceRecordId) else {
+                        throw ContentError(.notContent)
+                    }
+                    
+                    let record = AttendanceRecord(
+                        id: existing.id,
+                        attendanceId: existing.attendanceId,
+                        studentId: existing.studentId,
+                        statusId: newStatusId
+                    )
+                    
+                    try record.update(db)
+                    
+                    updatedRecord = record
                 }
-                single(.success(()))
                 
-                AttendanceMediator.shared.deleted(attendanceRecordId: attendanceRecordId)
+                if let record = updatedRecord {
+                    single(.success(record))
+                } else {
+                    single(.failure(NSError(
+                        domain: "AttendanceErrorDomain",
+                        code: 500,
+                        userInfo: [NSLocalizedDescriptionKey: "Не удалось обновить запись"]
+                    )))
+                }
+                
             } catch {
                 single(.failure(error))
             }
+            
             return Disposables.create()
         }
     }

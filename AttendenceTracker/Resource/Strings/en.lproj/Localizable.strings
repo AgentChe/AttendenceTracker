@@ -74,8 +74,10 @@
 "Course.Empty" = "You haven't added any attendances yet.";
 
 // MARK: Attendance
+"Attendance.Records.Title" = "Records:";
 "Attendance.Notes.Title" = "Notes:";
 "Attendance.EmailReport" = "Email report";
+"Attendance.SelectNewStatus" = "Select new status";
 
 // MARK: CreateAttendanceNote
 "CreateAttendanceNote.Placeholder" = "Leave a note";

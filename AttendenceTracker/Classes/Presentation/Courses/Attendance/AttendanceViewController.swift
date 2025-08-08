@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class AttendanceViewController: UIViewController {
     private lazy var mainView = AttendanceView()
@@ -14,6 +15,8 @@ final class AttendanceViewController: UIViewController {
     private let viewModel: AttendanceViewModel
     
     private lazy var disposeBag = DisposeBag()
+    
+    private lazy var didSelectNewStatusTrigger = PublishRelay<(Status, String)>()
     
     private init(attendance: Attendance) {
         viewModel = AttendanceViewModel(attendance: attendance)
@@ -35,7 +38,9 @@ final class AttendanceViewController: UIViewController {
         let output = viewModel.configure(input: AttendanceViewModel.Input(
             didDeleteNote: mainView.tableView.didDeleteNote,
             didSelectNote: mainView.tableView.didSelectNote,
-            didTapAddNote: mainView.tableView.didTapAddNote
+            didTapAddNote: mainView.tableView.didTapAddNote,
+            didTapChangeStatus: mainView.tableView.didTapChangeStatus,
+            didSelectNewStatus: didSelectNewStatusTrigger.asSignal()
         ))
         
         output.elements
@@ -75,6 +80,20 @@ private extension AttendanceViewController {
         case .openNote(let attendanceNote):
             let vc = AttendanceNoteViewController.make(attendanceNote: attendanceNote)
             present(vc, animated: true)
+        case .selectNewStatus(let statuses, let recordId):
+            let actionSheet = UIAlertController(title: "Attendance.SelectNewStatus".localized, message: nil, preferredStyle: .actionSheet)
+            
+            statuses.forEach { status in
+                let action = UIAlertAction(title: status.title, style: .default) { [weak self] action in
+                    self?.didSelectNewStatusTrigger.accept((status, recordId))
+                }
+                actionSheet.addAction(action)
+            }
+            
+            let cancelAction = UIAlertAction(title: "Cancel".localized, style: .cancel)
+            actionSheet.addAction(cancelAction)
+            
+            present(actionSheet, animated: true)
         }
     }
 }

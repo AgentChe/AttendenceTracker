@@ -15,6 +15,7 @@ final class AttendanceTableView: UITableView {
     private lazy var didTapAddNoteTrigger = PublishRelay<Void>()
     private lazy var didSelectNoteTrigger = PublishRelay<AttendanceNote>()
     private lazy var didDeleteNoteTrigger = PublishRelay<AttendanceNote>()
+    private lazy var didTapChangeStatusTrigger = PublishRelay<AttendanceTableRecordElement>()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -46,6 +47,10 @@ extension AttendanceTableView {
     var didDeleteNote: Signal<AttendanceNote> {
         didDeleteNoteTrigger.asSignal()
     }
+    
+    var didTapChangeStatus: Signal<AttendanceTableRecordElement> {
+        didTapChangeStatusTrigger.asSignal()
+    }
 }
 
 // MARK: UITableViewDataSource
@@ -56,6 +61,15 @@ extension AttendanceTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch elements[indexPath.row] {
+        case .recordsTitle:
+            return dequeueReusableCell(withIdentifier: String(describing: AttendanceTableRecordsTitleCell.self), for: indexPath)
+        case .record(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: AttendanceTableRecordCell.self), for: indexPath) as! AttendanceTableRecordCell
+            cell.setup(element: element)
+            cell.didTapStatus = { [weak self] in
+                self?.didTapChangeStatusTrigger.accept(element)
+            }
+            return cell
         case .notesTitle:
             let cell = dequeueReusableCell(withIdentifier: String(describing: AttendanceTableNotesTitleCell.self), for: indexPath) as! AttendanceTableNotesTitleCell
             cell.didTapAdd = { [weak self] in
@@ -120,6 +134,8 @@ private extension AttendanceTableView {
         separatorInset = UIEdgeInsets(horizontal: 16.scale)
         showsVerticalScrollIndicator = false
         
+        register(AttendanceTableRecordsTitleCell.self, forCellReuseIdentifier: String(describing: AttendanceTableRecordsTitleCell.self))
+        register(AttendanceTableRecordCell.self, forCellReuseIdentifier: String(describing: AttendanceTableRecordCell.self))
         register(AttendanceTableNotesTitleCell.self, forCellReuseIdentifier: String(describing: AttendanceTableNotesTitleCell.self))
         register(AttendanceTableNoteCell.self, forCellReuseIdentifier: String(describing: AttendanceTableNoteCell.self))
         

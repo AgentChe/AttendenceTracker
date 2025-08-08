@@ -6,6 +6,14 @@
 //
 
 enum AttendanceTableElement {
+    case recordsTitle
+    case record(AttendanceTableRecordElement)
     case notesTitle
     case note(AttendanceNote)
+}
+
+struct AttendanceTableRecordElement {
+    let recordId: String
+    let student: Student
+    let status: Status
 }

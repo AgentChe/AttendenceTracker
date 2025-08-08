@@ -42,6 +42,8 @@
 		DE3E9D6F2E44EF5C009DFF8B /* CreateAttendanceNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D6E2E44EF5C009DFF8B /* CreateAttendanceNoteView.swift */; };
 		DE3E9D722E44F443009DFF8B /* AttendanceNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D712E44F443009DFF8B /* AttendanceNoteViewController.swift */; };
 		DE3E9D742E44F447009DFF8B /* AttendanceNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D732E44F447009DFF8B /* AttendanceNoteView.swift */; };
+		DE3E9D762E46079A009DFF8B /* AttendanceTableRecordsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D752E460799009DFF8B /* AttendanceTableRecordsTitleCell.swift */; };
+		DE3E9D782E460928009DFF8B /* AttendanceTableRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D772E460928009DFF8B /* AttendanceTableRecordCell.swift */; };
 		DE4504382E3A25A10085626C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE45042F2E3A25A10085626C /* Assets.xcassets */; };
 		DE45043A2E3A25A10085626C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4504322E3A25A10085626C /* LaunchScreen.storyboard */; };
 		DE4504492E3A287D0085626C /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4504432E3A287D0085626C /* IBMPlexSans-SemiBold.ttf */; };
@@ -184,6 +186,8 @@
 		DE3E9D6E2E44EF5C009DFF8B /* CreateAttendanceNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAttendanceNoteView.swift; sourceTree = "<group>"; };
 		DE3E9D712E44F443009DFF8B /* AttendanceNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceNoteViewController.swift; sourceTree = "<group>"; };
 		DE3E9D732E44F447009DFF8B /* AttendanceNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceNoteView.swift; sourceTree = "<group>"; };
+		DE3E9D752E460799009DFF8B /* AttendanceTableRecordsTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTableRecordsTitleCell.swift; sourceTree = "<group>"; };
+		DE3E9D772E460928009DFF8B /* AttendanceTableRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTableRecordCell.swift; sourceTree = "<group>"; };
 		DE4504162E3A259B0085626C /* AttendenceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendenceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE45042F2E3A25A10085626C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4504302E3A25A10085626C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -473,6 +477,8 @@
 			children = (
 				DE3E9D652E44E73C009DFF8B /* AttendanceTableNotesTitleCell.swift */,
 				DE3E9D672E44E849009DFF8B /* AttendanceTableNoteCell.swift */,
+				DE3E9D752E460799009DFF8B /* AttendanceTableRecordsTitleCell.swift */,
+				DE3E9D772E460928009DFF8B /* AttendanceTableRecordCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1192,6 +1198,7 @@
 				DECC9ED52E4232E50039B5A1 /* StudentNotesTableView.swift in Sources */,
 				DECC9E632E3E101C0039B5A1 /* Attendance.swift in Sources */,
 				DECC9EDE2E4238A60039B5A1 /* CreateStudentNoteViewModel.swift in Sources */,
+				DE3E9D762E46079A009DFF8B /* AttendanceTableRecordsTitleCell.swift in Sources */,
 				DECC9EBE2E41F0460039B5A1 /* CreateStudentViewModel.swift in Sources */,
 				DECC9EA02E40DF650039B5A1 /* StatusesTableCell.swift in Sources */,
 				DECC9EDC2E42389E0039B5A1 /* CreateStudentNoteViewController.swift in Sources */,
@@ -1212,6 +1219,7 @@
 				DE45064D2E3A28840085626C /* ChoosePhotoFromGallery.swift in Sources */,
 				DE3E9D742E44F447009DFF8B /* AttendanceNoteView.swift in Sources */,
 				DE3E9D722E44F443009DFF8B /* AttendanceNoteViewController.swift in Sources */,
+				DE3E9D782E460928009DFF8B /* AttendanceTableRecordCell.swift in Sources */,
 				DE4506522E3A28840085626C /* SessionManager.swift in Sources */,
 				DE3E9D6D2E44EF58009DFF8B /* CreateAttendanceNoteViewModel.swift in Sources */,
 				DE4506552E3A28840085626C /* ContentError.swift in Sources */,
