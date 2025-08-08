@@ -13,7 +13,7 @@ final class AttendanceViewModel {
         case createNote(Attendance)
         case openNote(AttendanceNote)
         case selectNewStatus([Status], String)
-        case emailReport((AttendanceNote))
+        case emailReport(([AttendanceTableRecordElement], [AttendanceNote], Attendance))
     }
     
     private let attendance: Driver<Attendance>
@@ -66,7 +66,10 @@ extension AttendanceViewModel {
                 didSelectNote: input.didSelectNote,
                 didTapAddNote: input.didTapAddNote,
                 didTapChangeStatus: input.didTapChangeStatus,
-                statuses: statuses
+                statuses: statuses,
+                didTapEmailReport: input.didTapEmailReport,
+                recordsElements: recordsElements,
+                notes: notes
             )
         )
     }
@@ -79,7 +82,10 @@ private extension AttendanceViewModel {
         didSelectNote: Signal<AttendanceNote>,
         didTapAddNote: Signal<Void>,
         didTapChangeStatus: Signal<AttendanceTableRecordElement>,
-        statuses: Driver<[Status]>
+        statuses: Driver<[Status]>,
+        didTapEmailReport: Signal<Void>,
+        recordsElements: Driver<[AttendanceTableRecordElement]>,
+        notes: Driver<[AttendanceNote]>
     ) -> Driver<Action> {
         let createNote = didTapAddNote
             .asDriver(onErrorDriveWith: .never())
@@ -94,9 +100,16 @@ private extension AttendanceViewModel {
             .asDriver(onErrorDriveWith: .never())
             .withLatestFrom(statuses) { ($0.recordId, $1) }
             .map { Action.selectNewStatus($1, $0) }
+        
+        let emailReport = didTapEmailReport
+            .asDriver(onErrorDriveWith: .never())
+            .withLatestFrom(recordsElements)
+            .withLatestFrom(notes) { ($0, $1) }
+            .withLatestFrom(attendance) { ($0.0, $0.1, $1) }
+            .map { Action.emailReport(($0, $1, $2)) }
             
         return Driver
-            .merge(createNote, openNote, selectNewStatus)
+            .merge(createNote, openNote, selectNewStatus, emailReport)
     }
     
     func makeElements(

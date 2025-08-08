@@ -7,8 +7,6 @@
 
 import UIKit
 
-import UIKit
-
 final class StudentsNotesPDFGenerator {
     func generatePDF(for student: Student, notes: [StudentNote]) -> Data {
         let dateFormatter = DateFormatter()

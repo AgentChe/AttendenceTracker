@@ -44,6 +44,7 @@
 		DE3E9D742E44F447009DFF8B /* AttendanceNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D732E44F447009DFF8B /* AttendanceNoteView.swift */; };
 		DE3E9D762E46079A009DFF8B /* AttendanceTableRecordsTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D752E460799009DFF8B /* AttendanceTableRecordsTitleCell.swift */; };
 		DE3E9D782E460928009DFF8B /* AttendanceTableRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D772E460928009DFF8B /* AttendanceTableRecordCell.swift */; };
+		DE3E9D7B2E462562009DFF8B /* AttendancePDFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E9D7A2E462562009DFF8B /* AttendancePDFGenerator.swift */; };
 		DE4504382E3A25A10085626C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE45042F2E3A25A10085626C /* Assets.xcassets */; };
 		DE45043A2E3A25A10085626C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4504322E3A25A10085626C /* LaunchScreen.storyboard */; };
 		DE4504492E3A287D0085626C /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE4504432E3A287D0085626C /* IBMPlexSans-SemiBold.ttf */; };
@@ -188,6 +189,7 @@
 		DE3E9D732E44F447009DFF8B /* AttendanceNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceNoteView.swift; sourceTree = "<group>"; };
 		DE3E9D752E460799009DFF8B /* AttendanceTableRecordsTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTableRecordsTitleCell.swift; sourceTree = "<group>"; };
 		DE3E9D772E460928009DFF8B /* AttendanceTableRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceTableRecordCell.swift; sourceTree = "<group>"; };
+		DE3E9D7A2E462562009DFF8B /* AttendancePDFGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendancePDFGenerator.swift; sourceTree = "<group>"; };
 		DE4504162E3A259B0085626C /* AttendenceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendenceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE45042F2E3A25A10085626C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4504302E3A25A10085626C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 		DE3E9D572E44B7F9009DFF8B /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				DE3E9D792E462551009DFF8B /* Utils */,
 				DE3E9D5E2E44BB33009DFF8B /* Views */,
 				DE3E9D582E44B800009DFF8B /* AttendanceViewController.swift */,
 				DE3E9D5A2E44B82A009DFF8B /* AttendanceViewModel.swift */,
@@ -500,6 +503,14 @@
 				DE3E9D732E44F447009DFF8B /* AttendanceNoteView.swift */,
 			);
 			path = AttendanceNote;
+			sourceTree = "<group>";
+		};
+		DE3E9D792E462551009DFF8B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E9D7A2E462562009DFF8B /* AttendancePDFGenerator.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		DE45040D2E3A259B0085626C = {
@@ -1146,6 +1157,7 @@
 				DECC9E6F2E3E2DE10039B5A1 /* AttendanceRecord.swift in Sources */,
 				DECC9ECF2E421B410039B5A1 /* StudentNotesViewModel.swift in Sources */,
 				DECC9EAD2E41E3570039B5A1 /* StudentsViewController.swift in Sources */,
+				DE3E9D7B2E462562009DFF8B /* AttendancePDFGenerator.swift in Sources */,
 				DE4505E32E3A28840085626C /* NavigationController.swift in Sources */,
 				DECC9EE82E4279B50039B5A1 /* StudentsNotesPDFGenerator.swift in Sources */,
 				DE4505E42E3A28840085626C /* Fonts.swift in Sources */,

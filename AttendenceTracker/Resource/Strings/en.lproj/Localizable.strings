@@ -78,6 +78,7 @@
 "Attendance.Notes.Title" = "Notes:";
 "Attendance.EmailReport" = "Email report";
 "Attendance.SelectNewStatus" = "Select new status";
+"Attendance.Email.Subject" = "Attendance at %@";
 
 // MARK: CreateAttendanceNote
 "CreateAttendanceNote.Placeholder" = "Leave a note";

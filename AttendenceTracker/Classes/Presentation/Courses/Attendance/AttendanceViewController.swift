@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import MessageUI
 
 final class AttendanceViewController: UIViewController {
     private lazy var mainView = AttendanceView()
@@ -40,7 +41,8 @@ final class AttendanceViewController: UIViewController {
             didSelectNote: mainView.tableView.didSelectNote,
             didTapAddNote: mainView.tableView.didTapAddNote,
             didTapChangeStatus: mainView.tableView.didTapChangeStatus,
-            didSelectNewStatus: didSelectNewStatusTrigger.asSignal()
+            didSelectNewStatus: didSelectNewStatusTrigger.asSignal(),
+            didTapEmailReport: mainView.emailReportButton.rx.tap.asSignal()
         ))
         
         output.elements
@@ -70,6 +72,13 @@ extension AttendanceViewController {
     }
 }
 
+// MARK: MFMailComposeViewControllerDelegate
+extension AttendanceViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}
+
 // MARK: Private
 private extension AttendanceViewController {
     func action(_ action: AttendanceViewModel.Action) {
@@ -94,6 +103,34 @@ private extension AttendanceViewController {
             actionSheet.addAction(cancelAction)
             
             present(actionSheet, animated: true)
+        case .emailReport((let records, let notes, let attendance)):
+            DispatchQueue.global().async {
+                let pdf = AttendancePDFGenerator().generatePDF(for: records, notes: notes)
+                DispatchQueue.main.async { [weak self] in
+                    let recipients = records.map { $0.student.email }
+                    self?.sendEmail(with: pdf, to: recipients, attendance: attendance)
+                }
+            }
         }
+    }
+    
+    func sendEmail(with pdfData: Data, to recipients: [String], attendance: Attendance) {
+        guard MFMailComposeViewController.canSendMail() else { return }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
+        
+        let date = Date(timeIntervalSince1970: attendance.date)
+        let subject = String(format: "Attendance.Email.Subject".localized, dateFormatter.string(from: date))
+        
+        let mailVC = MFMailComposeViewController()
+        mailVC.mailComposeDelegate = self
+        mailVC.setSubject(subject)
+        mailVC.setToRecipients(recipients)
+        mailVC.addAttachmentData(
+            pdfData, mimeType: "application/pdf",
+            fileName: "\(subject).pdf"
+        )
+        present(mailVC, animated: true)
     }
 }
