@@ -19,8 +19,10 @@ final class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sdkInitialize.observe { [weak self] in
-            self?.openMain()
+        sdkInitialize.observe {
+            DispatchQueue.main.async {  [weak self] in
+                self?.openMain()
+            }
         }
     }
     
