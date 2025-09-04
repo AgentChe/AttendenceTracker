@@ -57,6 +57,9 @@ private extension CreateStudentViewController {
         switch action {
         case .close:
             dismiss(animated: true)
+        case .openPaygate:
+            let vc = PaygateViewController.make()
+            present(vc, animated: true)
         }
     }
 }

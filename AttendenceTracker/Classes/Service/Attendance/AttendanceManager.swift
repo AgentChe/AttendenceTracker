@@ -20,6 +20,7 @@ protocol AttendanceManagerProtocol {
     func fetchAllCourses() -> Single<[Course]>
     func fetchStatuses(forCourseId courseId: String) -> Single<[Status]>
     func setStatuses(ids: [String], forCourseId courseId: String) -> Single<Void>
+    func allCoursesCount() -> Single<Int>
 
     func createStudent(
         firstName: String,
@@ -30,6 +31,7 @@ protocol AttendanceManagerProtocol {
     func fetchAllStudents() -> Single<[Student]>
     func fetchStudents(forCourseId courseId: String) -> Single<[Student]>
     func setEnrollments(studentIds: [String], forCourseId courseId: String) -> Single<Void>
+    func allStudentsCount() -> Single<Int>
 
     func createAttendance(courseId: String, date: TimeInterval) -> Single<Attendance>
     func delete(attendanceId: String) -> Single<Void>
@@ -228,6 +230,20 @@ extension AttendanceManager: AttendanceManagerProtocol {
             return Disposables.create()
         }
     }
+    
+    func allCoursesCount() -> Single<Int> {
+        Single.create { single in
+            do {
+                let count = try self.dbQueue.read { db in
+                    try Course.fetchCount(db)
+                }
+                single(.success(count))
+            } catch {
+                single(.failure(error))
+            }
+            return Disposables.create()
+        }
+    }
 
     func fetchStatuses(forCourseId courseId: String) -> Single<[Status]> {
         Single.create { single in
@@ -345,6 +361,20 @@ extension AttendanceManager: AttendanceManagerProtocol {
                     )
                 }
                 single(.success(students))
+            } catch {
+                single(.failure(error))
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func allStudentsCount() -> Single<Int> {
+        Single.create { single in
+            do {
+                let count = try self.dbQueue.read { db in
+                    try Student.fetchCount(db)
+                }
+                single(.success(count))
             } catch {
                 single(.failure(error))
             }

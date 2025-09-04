@@ -11,6 +11,7 @@ import RxCocoa
 final class CreateStudentViewModel {
     enum Action {
         case close
+        case openPaygate
     }
     
     private lazy var attendanceManager = AttendanceManager()
@@ -40,14 +41,31 @@ private extension CreateStudentViewModel {
             .flatMapLatest { [weak self] data -> Driver<Action> in
                 guard let self else { return .never() }
                 
-                return attendanceManager
-                    .createStudent(
-                        firstName: data.firstName,
-                        lastName: data.lastName,
-                        email: data.email
-                    )
-                    .map { _ in Action.close }
-                    .asDriver(onErrorDriveWith: .never())
+                func create() -> Driver<Action> {
+                    return attendanceManager
+                        .createStudent(
+                            firstName: data.firstName,
+                            lastName: data.lastName,
+                            email: data.email
+                        )
+                        .map { _ in Action.close }
+                        .asDriver(onErrorDriveWith: .never())
+                }
+                
+                if SessionManager().hasActiveSubscriptions() {
+                    return create()
+                } else {
+                    return attendanceManager
+                        .allStudentsCount()
+                        .asDriver(onErrorJustReturn: 0)
+                        .flatMap { count -> Driver<Action> in
+                            if count < 5 {
+                                return create()
+                            } else {
+                                return .just(.openPaygate)
+                            }
+                        }
+                }
             }
     }
 }

@@ -74,6 +74,9 @@ private extension CreateCourseViewController {
             present(vc, animated: true)
         case .close:
             navigationController?.popViewController(animated: true)
+        case .openPaygate:
+            let vc = PaygateViewController.make()
+            present(vc, animated: true)
         }
     }
 }

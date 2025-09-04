@@ -13,6 +13,7 @@ final class CreateCourseViewModel {
         case createStudent
         case createStatus
         case close
+        case openPaygate
     }
     
     private lazy var attendanceManager = AttendanceManager()
@@ -91,21 +92,38 @@ private extension CreateCourseViewModel {
             .flatMapLatest { [weak self] courseName, selectedStudents, selectedStatuses -> Driver<Action> in
                 guard let self else { return .never() }
                 
-                return attendanceManager
-                    .createCourse(name: courseName)
-                    .flatMap { course -> Single<Void> in
-                        Single
-                            .zip(
-                                self.attendanceManager
-                                    .setEnrollments(studentIds: selectedStudents.map { $0.id }, forCourseId: course.id),
-                                
-                                self.attendanceManager
-                                    .setStatuses(ids: selectedStatuses.map { $0.id }, forCourseId: course.id)
-                            )
-                            .mapToVoid()
-                    }
-                    .map { Action.close }
-                    .asDriver(onErrorDriveWith: .never())
+                func create() -> Driver<Action> {
+                    return attendanceManager
+                        .createCourse(name: courseName)
+                        .flatMap { course -> Single<Void> in
+                            Single
+                                .zip(
+                                    self.attendanceManager
+                                        .setEnrollments(studentIds: selectedStudents.map { $0.id }, forCourseId: course.id),
+                                    
+                                    self.attendanceManager
+                                        .setStatuses(ids: selectedStatuses.map { $0.id }, forCourseId: course.id)
+                                )
+                                .mapToVoid()
+                        }
+                        .map { Action.close }
+                        .asDriver(onErrorDriveWith: .never())
+                }
+                
+                if SessionManager().hasActiveSubscriptions() {
+                    return create()
+                } else {
+                    return attendanceManager
+                        .allCoursesCount()
+                        .asDriver(onErrorJustReturn: 0)
+                        .flatMap { count -> Driver<Action> in
+                            if count == 0 {
+                                return create()
+                            } else {
+                                return .just(.openPaygate)
+                            }
+                        }
+                }
             }
         
         return Driver
