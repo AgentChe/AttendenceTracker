@@ -19,10 +19,8 @@ final class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sdkInitialize.observe {
-            DispatchQueue.main.async {  [weak self] in
-                self?.openMain()
-            }
+        sdkInitialize.observe { [weak self] in
+            self?.route()
         }
     }
     
@@ -40,15 +38,24 @@ extension SplashViewController {
 
 // MARK: Private
 private extension SplashViewController {
-    func openMain() {
-        guard let window = UIApplication.shared.window else {
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) { [weak self] in
-                self?.openMain()
+    func route() {
+        DispatchQueue.main.async { [weak self] in
+            guard let window = UIApplication.shared.window else {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) { [weak self] in
+                    self?.route()
+                }
+                
+                return
             }
             
-            return
+            if SessionManager().hasActiveSubscriptions() {
+                window.rootViewController = MainViewController.make(requestReview: false)
+            } else {
+                let vc = PaygateViewController.make { [weak window] in
+                    window?.rootViewController = MainViewController.make(requestReview: false)
+                }
+                self?.present(vc, animated: true)
+            }
         }
-        
-        window.rootViewController = MainViewController.make(requestReview: false)
     }
 }

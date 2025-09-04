@@ -50,6 +50,9 @@
             ReferencedContainer = "container:AttendenceTracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <StoreKitConfigurationFileReference
+         identifier = "../AttendenceTracker/Classes/Presentation/Splash/Paygate/Paygate.storekit">
+      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

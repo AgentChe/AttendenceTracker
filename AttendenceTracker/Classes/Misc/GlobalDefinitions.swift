@@ -17,4 +17,9 @@ final class GlobalDefinitions {
     static let termsOfServiceUrl = URL(string: "https://sergei-mobile.com/eula.html")!
     static let privacyPolicyUrl = URL(string: "https://sergei-mobile.com/policy.html")!
     static let contactUsUrl = URL(string: "https://sergei-mobile.com/contact.html")!
+    
+    enum Paygate {
+        static let lifetime = "com.sp.attendanceTracker.lifetime"
+        static let subscription = "com.sp.attendanceTracker.monthly"
+    }
 }

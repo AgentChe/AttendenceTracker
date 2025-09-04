@@ -19,6 +19,29 @@
 // MARK: Splash
 "Splash.Preparing" = "Preparing...";
 
+// MARK: Paygate
+"Paygate.Error.Title" = "Error";
+"Paygate.Error.Text" = "An error occurred during execution. Try later.";
+"Paygate.Error.Button" = "OK";
+"Paygate.Title" = "Unlock Premium Access";
+"Paygate.Info1" = "Mark presence with one tap";
+"Paygate.Info2" = "Manage multiple courses";
+"Paygate.Info3" = "Gain insights with detailed records";
+"Paygate.Lifetime.Title" = "Lifetime";
+"Paygate.Lifetime.Period" = "week";
+"Paygate.Lifetime.InTerms" = "In terms of  1  year";
+"Paygate.Lifetime.Discount" = "SAVE %i%%";
+"Paygate.Lifetime.Once" = "once";
+"Paygate.Subscription.Name1" = "3 days for free";
+"Paygate.Subscription.Name2" = "Quick prep";
+"Paygate.Subscription.Bottom1" = "After 3 day trial";
+"Paygate.Subscription.Bottom2" = "Trial is over";
+"Paygate.Subscription.Period" = "month";
+"Paygate.CancelAnytime" = "Secured by the App Store. Cancel anytime.";
+"Paygate.TermsOfUse" = "Terms of Use";
+"Paygate.PrivacyPolicy" = "Privacy Policy";
+"Paygate.RestorePurchases" = "Restore Purchases";
+
 // MARK: Main
 "Main.Courses" = "Courses";
 "Main.Students" = "Students";

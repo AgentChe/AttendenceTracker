@@ -16,6 +16,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         AmplitudeManager.shared.initialize()
         OtterScale.shared.initialize(host: GlobalDefinitions.otterScaleHost, apiKey: GlobalDefinitions.otterScaleApiKey)
         
+        PurchaseValidationObserver.shared.startObserve()
+        IAPManager.initialize()
+        
         return true
     }
     
