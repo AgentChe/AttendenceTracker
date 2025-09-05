@@ -19,7 +19,7 @@ final class GlobalDefinitions {
     static let contactUsUrl = URL(string: "https://sergei-mobile.com/contact.html")!
     
     enum Paygate {
-        static let lifetime = "com.sp.attendanceTracker.lifetime"
+        static let lifetime = "com.sp.attendanceTracker.lifetime1"
         static let subscription = "com.sp.attendanceTracker.monthly"
     }
 }
