@@ -71,7 +71,6 @@
 		DE4505E72E3A28840085626C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4504622E3A28840085626C /* String+Extension.swift */; };
 		DE4505EC2E3A28840085626C /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45047C2E3A28840085626C /* TextAttributes.swift */; };
 		DE4505EE2E3A28840085626C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4504742E3A28840085626C /* NetworkError.swift */; };
-		DE4505F82E3A28840085626C /* AmplitudeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45044E2E3A28840085626C /* AmplitudeManager.swift */; };
 		DE4505FD2E3A28840085626C /* RxActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4504522E3A28840085626C /* RxActivityIndicator.swift */; };
 		DE4506002E3A28840085626C /* UIView+RxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4504682E3A28840085626C /* UIView+RxExtension.swift */; };
 		DE4506012E3A28840085626C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4504832E3A28840085626C /* SceneDelegate.swift */; };
@@ -216,7 +215,6 @@
 		DE4504422E3A287D0085626C /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
 		DE4504432E3A287D0085626C /* IBMPlexSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		DE4504462E3A287D0085626C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DE45044E2E3A28840085626C /* AmplitudeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeManager.swift; sourceTree = "<group>"; };
 		DE4504502E3A28840085626C /* ChoosePhotoFromGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotoFromGallery.swift; sourceTree = "<group>"; };
 		DE4504512E3A28840085626C /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		DE4504522E3A28840085626C /* RxActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxActivityIndicator.swift; sourceTree = "<group>"; };
@@ -613,14 +611,6 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
-		DE45044F2E3A28840085626C /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				DE45044E2E3A28840085626C /* AmplitudeManager.swift */,
-			);
-			path = Analytics;
-			sourceTree = "<group>";
-		};
 		DE4504542E3A28840085626C /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,7 +699,6 @@
 		DE4504842E3A28840085626C /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				DE45044F2E3A28840085626C /* Analytics */,
 				DE4504542E3A28840085626C /* Components */,
 				DE45045F2E3A28840085626C /* CustomViews */,
 				DE4504692E3A28840085626C /* Extension */,
@@ -1288,7 +1277,6 @@
 				DECC9E8E2E40D2A10039B5A1 /* SettingsTableElement.swift in Sources */,
 				DE3E9D332E434D98009DFF8B /* CreateCourseViewModel.swift in Sources */,
 				DECC9E792E40C79F0039B5A1 /* MainView.swift in Sources */,
-				DE4505F82E3A28840085626C /* AmplitudeManager.swift in Sources */,
 				DECC9E842E40D1050039B5A1 /* SettingsView.swift in Sources */,
 				DECC9EB72E41E6E00039B5A1 /* StudentsTableCell.swift in Sources */,
 				DE4505FD2E3A28840085626C /* RxActivityIndicator.swift in Sources */,
@@ -1407,7 +1395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4X5YS65338;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1423,7 +1411,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sp.attendanceTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1446,7 +1434,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4X5YS65338;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1462,7 +1450,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sp.attendanceTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
